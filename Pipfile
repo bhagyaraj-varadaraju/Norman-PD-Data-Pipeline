@@ -1,0 +1,4 @@
+[packages]
+pypdf = "*"
+pytest = "*"
+setuptools = "*"
