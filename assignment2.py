@@ -1,6 +1,7 @@
 import argparse
 import os
-from src import utils, augment
+from src import extract_utils, augment_data
+
 
 def main(urls_file):
     #Read the file and get the url from each line
@@ -9,6 +10,7 @@ def main(urls_file):
         # Delete the old db file if it exists
         try:
             os.remove("resources/normanpd_raw.db")
+            os.remove("resources/normanpd_augmented.csv")
         except FileNotFoundError:
             pass
 
@@ -19,19 +21,19 @@ def main(urls_file):
             url = url.strip()
 
             # Download data
-            incident_data = utils.fetchincidents(url)
+            incident_data = extract_utils.fetchincidents(url)
 
             # Extract data
-            incidents = utils.extractincidents(incident_data)
+            incidents = extract_utils.extractincidents(incident_data)
 
             # Create new database
-            db = utils.createdb("normanpd_raw")
+            db = extract_utils.createdb("normanpd_raw")
 
             # Insert the extracted raw data into the database
-            utils.populatedb(db, incidents)
+            extract_utils.populatedb(db, incidents)
 
     # Augment the data
-    augmented_data = augment.augment_data(db)
+    augmented_data = augment_data.augment_data(db)
 
     # Redirect to csv file
     with open("resources/normanpd_augmented.csv", "w") as f:
