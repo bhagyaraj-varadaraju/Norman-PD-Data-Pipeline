@@ -57,17 +57,17 @@ def get_incident_ranks(db):
 def get_emsstat(incident_row_num, incident_ori, incidents):
     # Return True if the incident_ori is EMSSTAT
     if incident_ori == "EMSSTAT":
-        return True
+        return 1
     
     # Return True if the subsequent record or two contain an EMSSTAT at the same time and location
     # Checking for EMSSTAT, till the records have same time and location
-    for i in range(incident_row_num+1, min(incident_row_num+3, len(incidents))):
+    for i in range(incident_row_num+1, len(incidents)):
         if incidents[i][0] == incidents[incident_row_num][0]:   # Check if the time is same
             if incidents[i][2] == incidents[incident_row_num][2]:   # Check if the location is same
                 if incidents[i][4] == "EMSSTAT":    # Check if the incident_ori is EMSSTAT
-                    return True
+                    return 1
         else:
             break
 
     # Return False otherwise
-    return False
+    return 0
