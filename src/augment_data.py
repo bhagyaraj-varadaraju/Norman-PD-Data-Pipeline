@@ -25,7 +25,7 @@ def augment_data(db):
         output_row.append(augment_utils.get_time(incident[0].split()[1]))
 
         # Get the weather at the time and location of the incident
-        output_row.append(weather_helper.get_weather(incident[0], incident[2]))
+        output_row.append(weather_helper.get_weather_code(incident[0], incident[2]))
 
         # Get the incident_location rank
         output_row.append(location_ranks[incident[2]])

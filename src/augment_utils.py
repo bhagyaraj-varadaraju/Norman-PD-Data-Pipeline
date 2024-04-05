@@ -4,28 +4,32 @@ from datetime import datetime
 # Day of week is a numeric value in the range 1-7. Where 1 corresponds to Sunday and 7 corresonds of Saturday.
 def get_day(day):
     day_num = datetime.strptime(day, '%m/%d/%Y').weekday() # Monday is 0 and Sunday is 6
-    return (day_num + 2) % 7    # Sunday is 1 and Saturday is 7
+    return ((day_num + 2) % 7) or 7    # Sunday is 1 and Saturday is 7
 
 
 # Time of data is a numeric code from 0 to 24 describing the hour of the incident.
 def get_time(time):
-    time_num = datetime.strptime(time, '%H:%M').hour
+    time_num = int(datetime.strptime(time, '%H:%M').strftime('%H'))
     return time_num
 
 
 # Determine the rank of the location based on the frequency of incidents at that location.
 def get_location_ranks(db):
+    # Create a dictionary to store the rank of the location based on the frequency of incidents at that location.
     location_rank = {}
     cur = db.cursor()
     cur.execute('''SELECT incident_location, COUNT(*) FROM incidents GROUP BY incident_location ORDER BY COUNT(*) DESC, incident_location ASC''')
     rows = cur.fetchall()
     assigned_rank = 1
 
+    # Assign the rank to the location based on the frequency of incidents at that location.
     for i, row in enumerate(rows):
+        # If the frequency of the incident is the same as the previous incident, assign the same rank.
         if i == 0:
             location_rank[row[0]] = assigned_rank
         elif rows[i-1][1] == row[1]:
             location_rank[row[0]] = assigned_rank
+        # If the frequency of the incident is different from the previous incident, assign a new rank.
         else:
             location_rank[row[0]] = i + 1
             assigned_rank = i + 1
@@ -35,17 +39,21 @@ def get_location_ranks(db):
 
 # Determine the rank of the incident based on the frequency of the incident nature.
 def get_incident_ranks(db):
+    # Create a dictionary to store the rank of the incident based on the frequency of the incident nature.
     incident_rank = {}
     cur = db.cursor()
     cur.execute('''SELECT nature, COUNT(*) FROM incidents GROUP BY nature ORDER BY COUNT(*) DESC, nature ASC''')
     rows = cur.fetchall()
     assigned_rank = 1
 
+    # Assign the rank to the incident based on the frequency of the incident_nature.
     for i, row in enumerate(rows):
+        # If the frequency of the incident is the same as the previous incident, assign the same rank.
         if i == 0:
             incident_rank[row[0]] = assigned_rank
         elif rows[i-1][1] == row[1]:
             incident_rank[row[0]] = assigned_rank
+        # If the frequency of the incident is different from the previous incident, assign a new rank.
         else:
             incident_rank[row[0]] = i + 1
             assigned_rank = i + 1

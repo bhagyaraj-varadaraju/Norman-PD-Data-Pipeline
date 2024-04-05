@@ -1,4 +1,3 @@
-from geopy.distance import geodesic
 from geographiclib.geodesic import Geodesic
 from geopy.geocoders import Nominatim
 import re
@@ -8,7 +7,7 @@ def get_side_of_town(incident_location):
     # Get the latitude and longitude of the incident location
     incident_lat, incident_long = get_lat_long(incident_location)
     if incident_lat is None or incident_long is None:
-        return None
+        return ''
 
     # Determine the side of town based on the orientation of the incident_location relative to the center of town
     center_lat, center_long = 35.220833, -97.443611

@@ -1,5 +1,5 @@
 import argparse
-import os
+import os, sys
 from src import extract_utils, augment_data
 
 
@@ -37,14 +37,12 @@ def main(urls_file):
 
     # Redirect to csv file
     with open("resources/normanpd_augmented.csv", "w") as f:
+        header = ["Day of the Week", "Time of Day", "Weather", "Location Rank", "Side of Town", "Incident Rank", "Nature", "EMSSTAT"]
+        f.write("\t".join(header) + "\n")
         for row in augmented_data:
-            f.write(",".join(map(str, row)) + "\n")
-
-    # # Print to stdout
-    # header = ["Day of the Week", "Time of Day", "Weather", "Location Rank", "Side of Town", "Incident Rank", "Nature", "EMSSTAT"]
-    # print("\t".join(header))
-    # for row in augmented_data:
-    #     print("\t".join(map(str, row)))
+            f.write("\t".join(map(str, row)) + "\n")
+            # Print to stdout
+            print("\t".join(map(str, row)), file=sys.stdout)
 
     # Close the database connection
     db.close()
