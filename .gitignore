@@ -6,6 +6,12 @@ __pycache__/
 # C extensions
 *.so
 
+# Editor / IDE specific files
+.idea/
+.vscode/
+.DS_Store
+.cache.sqlite
+
 # Distribution / packaging
 .Python
 build/

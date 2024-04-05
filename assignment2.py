@@ -1,11 +1,20 @@
 import argparse
+import os
 from src import utils, augment
 
 def main(urls_file):
     #Read the file and get the url from each line
     with open(urls_file, 'r') as f:
         urls = f.readlines()
-        for i, url in zip(range(len(urls)), urls):
+        # Delete the old db file if it exists
+        try:
+            os.remove("resources/normanpd_raw.db")
+        except FileNotFoundError:
+            pass
+
+        db = None
+        # Iterate through each url and extract the raw incident data
+        for url in urls:
             # Remove the newline character
             url = url.strip()
 
@@ -16,13 +25,27 @@ def main(urls_file):
             incidents = utils.extractincidents(incident_data)
 
             # Create new database
-            db = utils.createdb()
+            db = utils.createdb("normanpd_raw")
 
-            # Insert data
+            # Insert the extracted raw data into the database
             utils.populatedb(db, incidents)
 
-            # Print the progress by showing the number of urls processed till now
-            print(f"Processed number:{i+1} url")
+    # Augment the data
+    augmented_data = augment.augment_data(db)
+
+    # Redirect to csv file
+    with open("resources/normanpd_augmented.csv", "w") as f:
+        for row in augmented_data:
+            f.write(",".join(map(str, row)) + "\n")
+
+    # # Print to stdout
+    # header = ["Day of the Week", "Time of Day", "Weather", "Location Rank", "Side of Town", "Incident Rank", "Nature", "EMSSTAT"]
+    # print("\t".join(header))
+    # for row in augmented_data:
+    #     print("\t".join(map(str, row)))
+
+    # Close the database connection
+    db.close()
 
 
 if __name__ == '__main__':

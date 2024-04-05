@@ -80,17 +80,14 @@ def extractincidents(data):
 
 
 # Create an SQLite database file named normanpd.db in the resources/ directory and create an incidents table
-def createdb():
+def createdb(db_name):
     try:
         # Connect to the database
-        con = sqlite3.connect('resources/normanpd.db')
+        con = sqlite3.connect(f'resources/{db_name}.db')
         cur = con.cursor()
 
-        # Drop the table if it already exists
-        cur.execute('DROP TABLE IF EXISTS incidents')
-
         # Create the incidents table
-        cur.execute('''CREATE TABLE incidents (incident_time TEXT, incident_number TEXT, incident_location TEXT, nature TEXT, incident_ori TEXT)''')
+        cur.execute('''CREATE TABLE IF NOT EXISTS incidents (incident_time TEXT, incident_number TEXT, incident_location TEXT, nature TEXT, incident_ori TEXT)''')
 
         # Commit the changes
         con.commit()
@@ -114,4 +111,3 @@ def populatedb(con, incidents):
 
     # Commit and Close the connection
     con.commit()
-    con.close()
