@@ -42,7 +42,7 @@ def get_lat_long(incident_location):
         if (is_lat_long(incident_location)):
             return float(incident_location.split(";")[0]), float(incident_location.split(";")[1])
         else:
-            location = geolocator.geocode(incident_location)
+            location = geolocator.geocode(f"{incident_location}, NORMAN, OK")
             if location is None:
                 return None, None
             return location.latitude, location.longitude

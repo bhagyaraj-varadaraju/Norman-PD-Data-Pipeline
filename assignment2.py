@@ -39,9 +39,12 @@ def main(urls_file):
     with open("resources/normanpd_augmented.csv", "w") as f:
         header = ["Day of the Week", "Time of Day", "Weather", "Location Rank", "Side of Town", "Incident Rank", "Nature", "EMSSTAT"]
         f.write("\t".join(header) + "\n")
+        # Print the header to stdout
+        print("\t".join(header), file=sys.stdout)
+
         for row in augmented_data:
             f.write("\t".join(map(str, row)) + "\n")
-            # Print to stdout
+            # Print each row to stdout
             print("\t".join(map(str, row)), file=sys.stdout)
 
     # Close the database connection
