@@ -14,6 +14,9 @@ def augment_data(db):
     # Create and populate the incident_ranks dictionary
     incident_ranks = augment_utils.get_incident_ranks(db)
 
+    # Create and populate the emsstat dictionary
+    emsstat_values = augment_utils.get_emsstat(incidents)
+
     # Augment the data
     for row_num, incident in enumerate(incidents):
         output_row = []
@@ -40,7 +43,7 @@ def augment_data(db):
         output_row.append(incident[3])
 
         # Get the EMSSTAT value
-        output_row.append(augment_utils.get_emsstat(row_num, incident[4], incidents))
+        output_row.append(emsstat_values[row_num])
 
         # Append the augmented data row to the list
         augmented_data.append(output_row)
