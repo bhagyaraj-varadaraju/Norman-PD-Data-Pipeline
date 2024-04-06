@@ -1,6 +1,409 @@
 Day of the Week	Time of Day	Weather	Location Rank	Side of Town	Incident Rank	Nature	EMSSTAT
-5	0	1	2	N	2	Transfer/Interfacility	1
-5	0	1	214	N	1	Traffic Stop	0
-5	0	1	214	NE	4	Contact a Subject	0
-5	0	1	73	E	25	Overdose/Poisoning	1
-5	0	1	73	E	25	Overdose/Poisoning	1
+5	0	1	2	NW	2	Transfer/Interfacility	1
+5	0	1	66	SW	1	Traffic Stop	0
+5	0	1	66	NE	4	Contact a Subject	0
+5	0	1	19	E	27	Overdose/Poisoning	1
+5	0	1	19	E	27	Overdose/Poisoning	1
+5	0	1	19	NE	21	Convulsion/Seizure	1
+5	0	1	19	NE	21	Convulsion/Seizure	1
+5	0	1	66	E	6	Suspicious	0
+5	0	1	3	SE	2	Transfer/Interfacility	1
+5	0	1	19	W	33	Supplement Report	0
+5	0		66		1	Traffic Stop	0
+5	0	1	1	N	2	Transfer/Interfacility	1
+5	0	1	66	SW	4	Contact a Subject	0
+5	0		66		51	Reckless Driving	0
+5	1	1	66	N	6	Suspicious	0
+5	1	1	66	SE	7	Larceny	0
+5	1		66		1	Traffic Stop	0
+5	1	1	66	SE	51	Fire Carbon Monoxide Alarm	0
+5	1	1	2	NW	2	Transfer/Interfacility	1
+5	2	1	66	E	13	Alarm	0
+5	2	1	66	N	13	Burglary	0
+5	2	1	66	SW	13	Alarm	0
+5	2	1	66	W	1	Traffic Stop	0
+5	3	1	19	S	27	Overdose/Poisoning	1
+5	3	1	19	S	27	Overdose/Poisoning	1
+5	3	1	66	NE	6	Suspicious	0
+5	3	1	66	SE	9	Check Area	0
+5	3	1	66	NW	6	Suspicious	0
+5	4	1	66	NW	6	Suspicious	0
+5	4		66		4	Contact a Subject	0
+5	4	1	66	NW	5	Disturbance/Domestic	0
+5	4	1	66	E	3	Sick Person	1
+5	4	1	19	NE	16	Chest Pain	1
+5	4	1	19	NE	16	Chest Pain	1
+5	4	1	19	NW	3	Sick Person	1
+5	4	1	19	NW	3	Sick Person	1
+5	5	1	66	N	6	Suspicious	0
+5	5	1	66	SW	21	COP Relationships	0
+5	5	1	2	NW	2	Transfer/Interfacility	1
+5	5	1	66	NE	6	Suspicious	0
+5	5	1	66	NE	4	Contact a Subject	0
+5	6	2	19	SE	40	Abdominal Pains/Problems	1
+5	6	2	19	SE	40	Abdominal Pains/Problems	1
+5	6		66		51	Debris in Roadway	0
+5	6		66		33	Stolen Vehicle	0
+5	6	2	1	N	2	Transfer/Interfacility	1
+5	6	2	2	NW	2	Transfer/Interfacility	1
+5	7	2	66	SW	6	Suspicious	0
+5	7		66		27	MVA Non Injury	0
+5	7	1	19	W	11	Hemorrhage/Lacerations	1
+5	7	1	19	W	11	Hemorrhage/Lacerations	1
+5	7	1	5	N	11	Hemorrhage/Lacerations	1
+5	7	1	5	N	11	Hemorrhage/Lacerations	1
+5	7	2	66	SE	40	Trespassing	0
+5	7		66		6	Suspicious	0
+5	7	2	66	W	13	Alarm	0
+5	8	3	66	SE	21	Animal at Large	0
+5	8		66		27	Animal Dead	0
+5	8		66		21	Animal at Large	0
+5	8		66		21	Animal at Large	0
+5	8		66		27	MVA Non Injury	0
+5	8	3	19	E	16	Medical Call Pd Requested	1
+5	8	3	19	E	16	Medical Call Pd Requested	1
+5	8	3	66	SW	7	Larceny	0
+5	8	3	66	NE	7	Larceny	0
+5	8	3	66	W	21	Harassment / Threats Report	0
+5	8	3	66	SE	51	Barking Dog	0
+5	8	3	19	W	3	Sick Person	1
+5	8	3	66	W	5	Disturbance/Domestic	0
+5	8	3	66	W	13	Burglary	0
+5	8	3	19	SE	21	Convulsion/Seizure	1
+5	8	3	19	SE	51	Assist Fire	1
+5	8	3	9	W	11	Cardiac Respritory Arrest	1
+5	8	3	9	W	11	Cardiac Respritory Arrest	1
+5	8	3	2	NW	2	Transfer/Interfacility	1
+5	9	2	66	N	7	Larceny	0
+5	9		66		40	Animal Livestock	0
+5	9		66		16	Parking Problem	0
+5	9	2	66	W	51	Animal Injured	0
+5	9		66		5	Disturbance/Domestic	0
+5	9	2	9	NW	4	Contact a Subject	0
+5	9	2	66	SE	33	Mutual Aid	0
+5	9		9		2	Transfer/Interfacility	1
+5	9	3	66	SE	1	Traffic Stop	0
+5	9	2	66	NE	21	Harassment / Threats Report	0
+5	9	2	66	SE	1	Traffic Stop	0
+5	9	2	19	NE	51	Drug Violation	0
+5	9	2	66	W	9	Check Area	0
+5	9	2	66	SW	33	COP Problem Solving	0
+5	9		9		2	Transfer/Interfacility	1
+5	9	2	66	SE	40	Item Assignment	0
+5	9	2	66	SW	51	Animal Complaint	0
+5	9	2	66	SW	1	Traffic Stop	0
+5	9	2	66	N	21	Public Assist	0
+5	10	1	66	NW	1	Traffic Stop	0
+5	10		66		33	Stolen Vehicle	0
+5	10	1	2	NW	2	Transfer/Interfacility	1
+5	10	1	9	NW	33	Assault	0
+5	10	1	19	SE	27	Fraud	0
+5	10	1	66	SE	27	Animal Dead	0
+5	10	2	19	E	4	Contact a Subject	0
+5	10	1	19	N	16	Chest Pain	1
+5	10	1	19	N	16	Chest Pain	1
+5	10	1	66	S	8	Falls	1
+5	10	1	1	N	2	Transfer/Interfacility	1
+5	10	1	66	SE	21	Harassment / Threats Report	0
+5	10	1	66	S	16	Parking Problem	0
+5	10	1	66	SE	16	Parking Problem	0
+5	10	2	19	E	3	Sick Person	1
+5	10	2	19	E	3	Sick Person	1
+5	10	1	5	N	8	Falls	1
+5	10	1	5	N	8	Falls	1
+5	10	2	66	NE	33	Animal Trapped	0
+5	10	1	6	E	40	Found Item	0
+5	11	0	19	W	7	Larceny	0
+5	11	0	19	W	11	Hemorrhage/Lacerations	1
+5	11	0	19	W	11	Hemorrhage/Lacerations	1
+5	11	0	9	NW	33	Assault	0
+5	11	0	66	W	5	Disturbance/Domestic	0
+5	11	0	19	S	3	Sick Person	1
+5	11	0	19	S	3	Sick Person	1
+5	11	0	66	SE	1	Traffic Stop	0
+5	11	0	66	E	40	Item Assignment	0
+5	11	0	19	W	3	Sick Person	1
+5	11	0	19	W	3	Sick Person	1
+5	11	0	66	W	21	Animal at Large	0
+5	11	0	66	NE	27	Fraud	0
+5	11	0	19	W	4	Contact a Subject	0
+5	11	0	66	NW	1	Traffic Stop	0
+5	11		66		1	Traffic Stop	0
+5	11	0	19	W	16	Breathing Problems	1
+5	11	0	19	W	16	Breathing Problems	1
+5	11	0	66	SE	5	Disturbance/Domestic	0
+5	11		66		51	Runaway or Lost Child	0
+5	11		66		33	Supplement Report	0
+5	12		66		10	Follow Up	0
+5	12	2	66	SE	6	Suspicious	0
+5	12	1	66	NE	33	Animal Trapped	0
+5	12	1	66	W	7	Larceny	0
+5	12	1	19	NW	3	Sick Person	1
+5	12	1	19	NW	3	Sick Person	1
+5	12	2	66	E	33	Animal Trapped	0
+5	12	2	66	SE	5	Disturbance/Domestic	0
+5	12		66		1	Traffic Stop	0
+5	12	1	66	N	27	MVA Non Injury	0
+5	12	2	8	SE	3	Sick Person	1
+5	12	2	8	SE	3	Sick Person	1
+5	12	2	8	SE	5	Disturbance/Domestic	1
+5	12	2	8	SE	13	Burglary	1
+5	12		9		27	MVA With Injuries	1
+5	12		9		27	MVA With Injuries	1
+5	12		9		21	Hit and Run	1
+5	12	2	66	SE	21	Animal at Large	0
+5	12	1	9	W	51	EMS Mutual Aid	1
+5	12	1	19	N	21	Hit and Run	0
+5	12	2	66	S	33	Mutual Aid	0
+5	12	2	66	SE	33	COP Problem Solving	0
+5	12	1	66	W	21	Public Assist	0
+5	12	2	19	SE	1	Traffic Stop	0
+5	12	1	66	E	3	Sick Person	1
+5	13		66		9	Check Area	0
+5	13	0	19	SW	8	Falls	1
+5	13	0	19	SW	8	Falls	1
+5	13	0	2	NW	2	Transfer/Interfacility	1
+5	13	0	1	N	2	Transfer/Interfacility	1
+5	13	0	66	E	40	Trespassing	0
+5	13	0	66	NE	51		0
+5	13	0	66	SE	16	Parking Problem	0
+5	13	0	3	SE	3	Sick Person	1
+5	13	0	3	SE	3	Sick Person	1
+5	13	0	3	SE	10	Follow Up	1
+5	13		66		9	Check Area	0
+5	13	0	19	NE	51	Fight	0
+5	13	0	66	E	1	Traffic Stop	0
+5	13	0	66	NE	4	Contact a Subject	0
+5	13		66		21	Harassment / Threats Report	0
+5	13	0	1	N	2	Transfer/Interfacility	1
+5	13	0	66	W	1	Traffic Stop	0
+5	13	1	19	NE	40	Diabetic Problems	1
+5	13	1	19	NE	40	Diabetic Problems	1
+5	13		66		4	Contact a Subject	0
+5	13	0	66	W	7	Larceny	0
+5	13		66		27	MVA Non Injury	0
+5	13	0	66	SE	33	COP Problem Solving	0
+5	13	0	66	SE	4	Contact a Subject	0
+5	13	0	66	SE	1	Traffic Stop	0
+5	13	0	66	SE	13	Burglary	0
+5	13		66		1	Traffic Stop	0
+5	13	0	1	N	2	Transfer/Interfacility	1
+5	13		66		16	Parking Problem	0
+5	13	0	66	SE	4	Contact a Subject	0
+5	13	0	66	W	1	Traffic Stop	0
+5	14	0	66	NW	10	Follow Up	0
+5	14	0	19	SE	7	Larceny	0
+5	14	0	66	S	1	Traffic Stop	0
+5	14	0	66	SE	1	Traffic Stop	0
+5	14		66		13	Welfare Check	0
+5	14	0	66	SE	1	Traffic Stop	0
+5	14	0	9	NW	10	Follow Up	0
+5	14	0	1	N	2	Transfer/Interfacility	1
+5	14	0	19	W	40	Found Item	0
+5	14	0	19	SW	27	Fraud	0
+5	14		66		16	Parking Problem	0
+5	14	0	1	N	2	Transfer/Interfacility	1
+5	14	0	66	W	16	911 Call Nature Unknown	0
+5	14	0	66	W	5	Disturbance/Domestic	0
+5	14	0	66	N	51	Stake Out	0
+5	14	0	66	SE	9	Check Area	0
+5	14	0	19	SE	1	Traffic Stop	0
+5	14		66		1	Traffic Stop	0
+5	14		66		27	Animal Dead	0
+5	14	0	19	E	27	Allergies/Envenomations	1
+5	14	0	19	E	27	Allergies/Envenomations	1
+5	14	0	3	SE	3	Sick Person	1
+5	14	0	3	SE	3	Sick Person	1
+5	14	0	66	S	16	911 Call Nature Unknown	0
+5	14	0	2	NW	2	Transfer/Interfacility	1
+5	14	0	66	S	4	Contact a Subject	0
+5	14	0	1	N	2	Transfer/Interfacility	1
+5	14	0	66	W	4	Contact a Subject	0
+5	14	0	66	SE	33	Stolen Vehicle	0
+5	14	0	66	S	10	Follow Up	0
+5	15	0	19	NW	27	Allergies/Envenomations	1
+5	15	0	19	NW	27	Allergies/Envenomations	1
+5	15	0	66	E	40	Animal Livestock	0
+5	15	0	66	W	1	Traffic Stop	0
+5	15	0	66	W	13	Alarm	0
+5	15	0	66	NE	1	Traffic Stop	0
+5	15	0	9	NW	5	Disturbance/Domestic	0
+5	15	0	66	SE	7	Larceny	0
+5	15	0	66	E	5	Disturbance/Domestic	0
+5	15		66		4	Contact a Subject	0
+5	15	0	66	SE	33	Mutual Aid	0
+5	15	0	66	W	1	Traffic Stop	0
+5	15		66		51	Missing Person	0
+5	15		66		51	Road Rage	0
+5	15	0	19	W	33	Assault	0
+5	15		66		27	Animal Dead	0
+5	15	0	1	N	2	Transfer/Interfacility	1
+5	15	0	66	NE	21	COP Relationships	0
+5	15	0	66	W	4	Contact a Subject	0
+5	15	0	66	W	1	Traffic Stop	0
+5	15	0	1	N	51	Escort/Transport	0
+5	15	0	19	SW	7	Larceny	0
+5	15	0	66	E	13	Welfare Check	0
+5	16	0	2	NW	2	Transfer/Interfacility	1
+5	16		9		27	MVA With Injuries	1
+5	16		9		27	MVA With Injuries	1
+5	16		9		40	Drunk Driver	1
+5	16	0	19	SE	8	Falls	1
+5	16	0	19	SE	8	Falls	1
+5	16		66		1	Traffic Stop	0
+5	16	0	6	NW	5	Disturbance/Domestic	0
+5	16	0	9	S	16	911 Call Nature Unknown	0
+5	16	0	3	SE	2	Transfer/Interfacility	1
+5	16	0	2	NW	2	Transfer/Interfacility	1
+5	16	0	3	SE	2	Transfer/Interfacility	1
+5	16	0	9	W	11	Cardiac Respritory Arrest	1
+5	16	0	9	W	11	Cardiac Respritory Arrest	1
+5	16	0	9	W	40	Body Reported	1
+5	16	0	2	NW	2	Transfer/Interfacility	1
+5	16	0	66	N	51	Civil Standby	0
+5	16	0	66	SW	6	Suspicious	0
+5	16	0	66	N	40	Open Door/Premises Check	0
+5	16	0	66	NW	4	Contact a Subject	0
+5	16	0	66	W	16	911 Call Nature Unknown	0
+5	16	0	66	SE	51	Alarm Holdup/Panic	0
+5	16	0	3	SE	8	Falls	1
+5	16	0	3	SE	8	Falls	1
+5	16	0	3	SE	2	Transfer/Interfacility	1
+5	17	0	66	SW	9	Check Area	0
+5	17		66		21	Hit and Run	0
+5	17	0	1	N	2	Transfer/Interfacility	1
+5	17	0	19	SW	51	Vandalism	0
+5	17	0	66	NE	21	COP Relationships	0
+5	17		66		21	COP Relationships	0
+5	17	0	66	NE	21	COP Relationships	0
+5	17	0	66	W	27	Fraud	0
+5	17	0	19	SW	6	Suspicious	0
+5	17	0	66	SE	21	Public Assist	0
+5	17	0	66	W	21	Hit and Run	0
+5	17		66		10	Follow Up	0
+5	17	0	19	E	11	Hemorrhage/Lacerations	1
+5	17	0	19	E	11	Hemorrhage/Lacerations	1
+5	17	0	19	W	3	Sick Person	1
+5	17	0	19	W	3	Sick Person	1
+5	17		66		33	Supplement Report	0
+5	17	0	19	SE	13	Burglary	0
+5	17	0	19	SW	10	Follow Up	0
+5	17		66		1	Traffic Stop	0
+5	17		66		1	Traffic Stop	0
+5	17	0	2	NW	2	Transfer/Interfacility	1
+5	17	0	66	SE	51	Indecent Exposure	0
+5	17	0	1	N	2	Transfer/Interfacility	1
+5	17	0	66	SW	51	Public Intoxication	0
+5	17	0	66	W	3	Sick Person	1
+5	17	0	19	W	3	Sick Person	1
+5	17	0	66	W	5	Disturbance/Domestic	0
+5	17	0	5	N	16	Chest Pain	1
+5	17	0	5	N	16	Chest Pain	1
+5	17	0	19	W	11	Cardiac Respritory Arrest	1
+5	17	0	19	W	11	Cardiac Respritory Arrest	1
+5	17	0	19	SW	6	Suspicious	0
+5	18	1	1	N	2	Transfer/Interfacility	1
+5	18		66		21	Hit and Run	0
+5	18	0	19	SE	3	Sick Person	1
+5	18	0	19	SE	3	Sick Person	1
+5	18	1	6	E	5	Disturbance/Domestic	0
+5	18	1	66	SE	7	Larceny	0
+5	18		19		8	Falls	1
+5	18		19		8	Falls	1
+5	18		66		51	Fire Gas Leak	0
+5	18	1	6	E	3	Sick Person	1
+5	18	1	6	E	3	Sick Person	1
+5	18	1	19	N	21	Harassment / Threats Report	0
+5	18		9		2	Transfer/Interfacility	1
+5	18		66		13	Welfare Check	0
+5	18	1	19	E	21	Convulsion/Seizure	1
+5	18	1	19	E	21	Convulsion/Seizure	1
+5	18	1	19	SE	5	Disturbance/Domestic	0
+5	18	1	66	N	5	Disturbance/Domestic	0
+5	19	0	66	NE	9	Check Area	0
+5	19	1	9	E	11	Cardiac Respritory Arrest	1
+5	19	1	9	E	11	Cardiac Respritory Arrest	1
+5	19	1	9	E	40	Body Reported	1
+5	19	0	66	W	51	Shots Heard	0
+5	19	1	66	SE	10	Follow Up	0
+5	19	1	66	SW	13	Welfare Check	0
+5	19	0	66	W	13	Alarm	0
+5	19	1	9	S	16	911 Call Nature Unknown	0
+5	19	0	1	N	2	Transfer/Interfacility	1
+5	19	1	66	SE	4	Contact a Subject	0
+5	19	1	66	SW	13	Burglary	0
+5	19	1	66	SE	6	Suspicious	0
+5	19	1	9	S	16	911 Call Nature Unknown	0
+5	19	1	66	SE	6	Suspicious	0
+5	19	1	3	SE	2	Transfer/Interfacility	1
+5	19	0	66	N	1	Traffic Stop	0
+5	19	0	66	E	21	Public Assist	0
+5	20	0	19	N	16	Medical Call Pd Requested	1
+5	20	0	19	N	16	Medical Call Pd Requested	1
+5	20		66		13	Welfare Check	0
+5	20		66		40	Drunk Driver	0
+5	20	0	66	N	1	Traffic Stop	0
+5	20	0	3	SE	2	Transfer/Interfacility	1
+5	20	0	66	S	51	Fire Alarm	0
+5	20	0	2	NW	2	Transfer/Interfacility	1
+5	20	0	19	W	5	Disturbance/Domestic	0
+5	20		66		1	Traffic Stop	0
+5	20	0	66	SE	6	Suspicious	0
+5	20	0	66	E	13	Burglary	0
+5	20	0	66	E	4	Contact a Subject	0
+5	20	0	6	E	5	Disturbance/Domestic	0
+5	20	0	19	NE	16	Breathing Problems	1
+5	20	0	19	NE	16	Breathing Problems	1
+5	21	1	19	N	40	Heart Problems/AICD	1
+5	21	1	19	N	40	Heart Problems/AICD	1
+5	21	1	66	SE	5	Disturbance/Domestic	0
+5	21	1	9	NW	40	Open Door/Premises Check	0
+5	21	1	19	E	16	Medical Call Pd Requested	1
+5	21	1	19	E	16	Medical Call Pd Requested	1
+5	21	1	19	NW	16	Breathing Problems	1
+5	21	1	19	NW	16	Breathing Problems	1
+5	21	1	66	SE	4	Contact a Subject	0
+5	21	1	3	SE	7	Larceny	0
+5	21	1	6	NW	13	Welfare Check	0
+5	21	1	66	SE	1	Traffic Stop	0
+5	21	1	2	NW	2	Transfer/Interfacility	1
+5	21	1	3	SE	7	Larceny	0
+5	21	1	3	SE	33	Motorist Assist	0
+5	22	0	66	N	1	Traffic Stop	0
+5	22		66		1	Traffic Stop	0
+5	22	0	6	NW	3	Sick Person	1
+5	22	0	6	NW	3	Sick Person	1
+5	22	0	6	NW	5	Disturbance/Domestic	1
+5	22	0	66	SE	1	Traffic Stop	0
+5	22	0	1	N	2	Transfer/Interfacility	1
+5	22		66		13	Welfare Check	0
+5	22	0	1	N	2	Transfer/Interfacility	1
+5	22	0	66	W	6	Suspicious	0
+5	22	0	66	SW	6	Suspicious	0
+5	22		66		4	Contact a Subject	0
+5	22	0	19	N	40	Back Pain	1
+5	22	0	19	N	40	Back Pain	1
+5	22	0	66	SE	4	Contact a Subject	0
+5	22	0	19	E	4	Contact a Subject	0
+5	22	0	66	SW	13	Alarm	0
+5	22	0	66	NE	1	Traffic Stop	0
+5	22	0	66	W	21	Public Assist	0
+5	22	0	66	W	13	Alarm	0
+5	22	0	9	SE	3	Sick Person	1
+5	22	0	9	SE	3	Sick Person	1
+5	22	0	9	SE	4	Contact a Subject	1
+5	22	0	1	N	2	Transfer/Interfacility	1
+5	22	0	66	SE	1	Traffic Stop	0
+5	23	1	66	NE	10	Follow Up	0
+5	23		66		33	Motorist Assist	0
+5	23	1	66	S	1	Traffic Stop	0
+5	23	1	66	SW	9	Check Area	0
+5	23	1	66	SE	5	Disturbance/Domestic	0
+5	23	1	66	S	1	Traffic Stop	0
+5	23	1	66	W	1	Traffic Stop	0
+5	23	1	66	W	6	Suspicious	0
+5	23	1	19	SW	51	Noise Complaint	0
+5	23	1	66	SE	1	Traffic Stop	0
+5	23	1	19	SW	9	Check Area	0
+5	23		66		33	Motorist Assist	0
+5	23	1	66	E	9	Check Area	0

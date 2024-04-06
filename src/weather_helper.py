@@ -23,11 +23,13 @@ def get_weather_code(incident_time, incident_location):
     return weather_code if weather_code is not None else ''
 
 
+# Get the date of the incident in the format YYYY-MM-DD, as this is the format the weather API requires
 def get_date(incident_time):
     date = incident_time.split()[0]
     return datetime.strptime(date, '%m/%d/%Y').strftime('%Y-%m-%d')
 
 
+# Get the weather response data from the weather API
 def get_weather_data(lat, long, date):
     # Get the weather data from the weather API
     try:
