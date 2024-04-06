@@ -19,7 +19,8 @@ def get_weather_code(incident_time, incident_location):
         return None
 
     # Return the weather code value by parsing the data
-    return data.get('hourly').get('weather_code')[augment_utils.get_time(incident_time.split()[1])]
+    weather_code = data.get('hourly').get('weather_code')[augment_utils.get_time(incident_time.split()[1])]
+    return weather_code if weather_code is not None else ''
 
 
 def get_date(incident_time):

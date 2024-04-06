@@ -1,1 +1,2 @@
-Christan Grant | christan@ufl.edu | Helped me understand the requirements of the project \
+Christan Grant | christan@ufl.edu | Helped me understand the requirements of the project. \
+https://geographiclib.sourceforge.io/ | https://geographiclib.sourceforge.io/html/python/code.html#geographiclib.geodesic.Geodesic.Inverse | Helped in finding the azimuthal angle between two points on the earth's surface. It can be used to find the direction of the incident location from the centre of the city. \
