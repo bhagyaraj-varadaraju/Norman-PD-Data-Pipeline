@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "e42aa17d9cb9ebfc2c41c8a1d968437ac046d902359de4b55882bee469cd3743"
+            "sha256": "ef34070f90cc4ab0111a2cfe15c0ca04af5b8ae6b8df497f436380d5d38f6111"
         },
         "pipfile-spec": 6,
         "requires": {},
@@ -14,22 +14,6 @@
         ]
     },
     "default": {
-        "attrs": {
-            "hashes": [
-                "sha256:935dc3b529c262f6cf76e50877d35a4bd3c1de194fd41f47a2b7ae8f19971f30",
-                "sha256:99b87a485a5820b23b879f04c2305b44b951b502fd64be915879d77a7e8fc6f1"
-            ],
-            "markers": "python_version >= '3.7'",
-            "version": "==23.2.0"
-        },
-        "cattrs": {
-            "hashes": [
-                "sha256:0341994d94971052e9ee70662542699a3162ea1e0c62f7ce1b4a57f563685108",
-                "sha256:a934090d95abaa9e911dac357e3a8699e0b4b14f8529bcc7d2b1ad9d51672b9f"
-            ],
-            "markers": "python_version >= '3.8'",
-            "version": "==23.2.3"
-        },
         "certifi": {
             "hashes": [
                 "sha256:0569859f95fc761b18b45ef421b1290a0f65f147e92a1e5eb3e635f9a5e4e66f",
@@ -134,13 +118,6 @@
             "markers": "python_full_version >= '3.7.0'",
             "version": "==3.3.2"
         },
-        "flatbuffers": {
-            "hashes": [
-                "sha256:8dbdec58f935f3765e4f7f3cf635ac3a77f83568138d6a2311f524ec96364812",
-                "sha256:de2ec5b203f21441716617f38443e0a8ebf3d25bf0d9c0bb0ce68fa00ad546a4"
-            ],
-            "version": "==24.3.25"
-        },
         "geographiclib": {
             "hashes": [
                 "sha256:6b7225248e45ff7edcee32becc4e0a1504c606ac5ee163a5656d482e0cd38734",
@@ -217,23 +194,6 @@
             "markers": "python_version >= '3.9'",
             "version": "==1.26.4"
         },
-        "openmeteo-requests": {
-            "hashes": [
-                "sha256:2ade77e3caa6cd7e4f42d360d9df3e26baed7735d31aa665a91ae1c81abea0c5",
-                "sha256:bfb8b47b307994ea82182a6b9b6dd288a64942d6d252c48ea8edccd171e272ba"
-            ],
-            "index": "pypi",
-            "markers": "python_full_version >= '3.8.1'",
-            "version": "==1.2.0"
-        },
-        "openmeteo-sdk": {
-            "hashes": [
-                "sha256:10f90e4f6693f49b9fcf14fb715e3ab8be58eb193e5c60458c3551762d0722fa",
-                "sha256:89e2f19a3f6162870c48b36b1262ab56bfec229d17e6b7745ad9b798302955db"
-            ],
-            "markers": "python_full_version >= '3.8.1'",
-            "version": "==1.11.3"
-        },
         "packaging": {
             "hashes": [
                 "sha256:2ddfb553fdf02fb784c234c7ba6ccc288296ceabec964ad2eae3777778130bc5",
@@ -277,14 +237,6 @@
             "index": "pypi",
             "markers": "python_version >= '3.9'",
             "version": "==2.2.1"
-        },
-        "platformdirs": {
-            "hashes": [
-                "sha256:0614df2a2f37e1a662acbd8e2b25b92ccf8632929bc6d43467e17fe89c75e068",
-                "sha256:ef0cc731df711022c174543cb70a9b5bd22e5a9337c8624ef2c2ceb8ddad8768"
-            ],
-            "markers": "python_version >= '3.8'",
-            "version": "==4.2.0"
         },
         "pluggy": {
             "hashes": [
@@ -332,26 +284,9 @@
                 "sha256:58cd2187c01e70e6e26505bca751777aa9f2ee0b7f4300988b709f44e013003f",
                 "sha256:942c5a758f98d790eaed1a29cb6eefc7ffb0d1cf7af05c3d2791656dbd6ad1e1"
             ],
+            "index": "pypi",
             "markers": "python_version >= '3.7'",
             "version": "==2.31.0"
-        },
-        "requests-cache": {
-            "hashes": [
-                "sha256:490324301bf0cb924ff4e6324bd2613453e7e1f847353928b08adb0fdfb7f722",
-                "sha256:db1c709ca343cc1cd5b6c8b1a5387298eceed02306a6040760db538c885e3838"
-            ],
-            "index": "pypi",
-            "markers": "python_version >= '3.8'",
-            "version": "==1.2.0"
-        },
-        "retry-requests": {
-            "hashes": [
-                "sha256:38e8e3f55051e7b7915c1768884269097865a5da2ea87d5dcafd6ba9498c363f",
-                "sha256:3d02135e5aafedf09240414182fc7389c5d2b4de0252daba0054c9d6a27e7639"
-            ],
-            "index": "pypi",
-            "markers": "python_version >= '3.6'",
-            "version": "==2.0.0"
         },
         "setuptools": {
             "hashes": [
@@ -377,14 +312,6 @@
             ],
             "markers": "python_version >= '2'",
             "version": "==2024.1"
-        },
-        "url-normalize": {
-            "hashes": [
-                "sha256:d23d3a070ac52a67b83a1c59a0e68f8608d1cd538783b401bc9de2c0fac999b2",
-                "sha256:ec3c301f04e5bb676d333a7fa162fa977ad2ca04b7e652bfc9fac4e405728eed"
-            ],
-            "markers": "python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2, 3.3, 3.4, 3.5'",
-            "version": "==1.4.3"
         },
         "urllib3": {
             "hashes": [

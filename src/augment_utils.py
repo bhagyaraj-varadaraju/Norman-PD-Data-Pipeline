@@ -69,7 +69,7 @@ def get_emsstat(incidents):
 
     # Make the incidents array a dataframe to make it easier to traverse through the records
     incidents_df = pd.DataFrame(incidents, columns=['incident_time', 'incident_number', 'incident_location', 'nature', 'incident_ori'])
-    
+
     # Replace all 'EMSSSTAT' values with 1 and all other values with 0
     incidents_df['emsstat'] = incidents_df['incident_ori'].apply(lambda x: 1 if x == 'EMSSTAT' else 0)
 
