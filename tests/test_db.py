@@ -4,6 +4,12 @@ from src.extract_utils import createdb, populatedb
 
 # Test the connection to the database
 def test_createdb_connection():
+    # Delete the database file
+    try:
+        os.remove('resources/normanpd_raw_test.db')
+    except FileNotFoundError:
+        pass
+
     # Connect to the database
     con = createdb('normanpd_raw_test')
 
@@ -13,15 +19,15 @@ def test_createdb_connection():
     # Close the connection
     con.close()
 
-    # Delete the database file
-    try:
-        os.remove('normanpd_raw_test.db')
-    except FileNotFoundError:
-        pass
-
 
 # Test the existence of the incidents table
 def test_createdb_table_existence():
+    # Delete the database file
+    try:
+        os.remove('resources/normanpd_raw_test.db')
+    except FileNotFoundError:
+        pass
+
     # Connect to the database
     con = createdb('normanpd_raw_test')
 
@@ -34,15 +40,15 @@ def test_createdb_table_existence():
     # Close the connection
     con.close()
 
-    # Delete the database file
-    try:
-        os.remove('normanpd_raw_test.db')
-    except FileNotFoundError:
-        pass
-
 
 # Test the schema of the incidents table
 def test_createdb_table_schema():
+    # Delete the database file
+    try:
+        os.remove('resources/normanpd_raw_test.db')
+    except FileNotFoundError:
+        pass
+
     # Connect to the database
     con = createdb('normanpd_raw_test')
 
@@ -60,12 +66,6 @@ def test_createdb_table_schema():
 
     # Close the connection
     con.close()
-
-    # Delete the database file
-    try:
-        os.remove('normanpd_raw_test.db')
-    except FileNotFoundError:
-        pass
 
 
 # Utility function to test populatedb and createdb
@@ -91,6 +91,12 @@ def db_helper():
 
 # Test the populatedb function
 def test_populatedb():
+    # Delete the database file
+    try:
+        os.remove('resources/normanpd_raw_test.db')
+    except FileNotFoundError:
+        pass
+
     # Connect to the database
     con, incidents = db_helper()
 
@@ -107,9 +113,3 @@ def test_populatedb():
     cur.execute("SELECT * FROM incidents")
     records = cur.fetchall()
     assert records == incidents
-
-    # Delete the database file
-    try:
-        os.remove('normanpd_raw_test.db')
-    except FileNotFoundError:
-        pass

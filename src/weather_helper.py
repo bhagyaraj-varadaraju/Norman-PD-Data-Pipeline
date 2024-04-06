@@ -30,14 +30,22 @@ def get_date(incident_time):
 
 def get_weather_data(lat, long, date):
     # Get the weather data from the weather API
-    url = "https://archive-api.open-meteo.com/v1/archive"
-    params = {
-        "latitude": lat,
-        "longitude": long,
-        "start_date": date,
-        "end_date": date,
-        "hourly": "weather_code",
-        "timezone": "America/Chicago"
-    }
-    data = requests.get(url, params).json()
-    return data
+    try:
+        url = "https://archive-api.open-meteo.com/v1/archive"
+        params = {
+            "latitude": lat,
+            "longitude": long,
+            "start_date": date,
+            "end_date": date,
+            "hourly": "weather_code",
+            "timezone": "America/Chicago"
+        }
+
+        response = requests.get(url, params=params)
+        response.raise_for_status()
+        return response.json()
+
+    # Handle any HTTP errors that occur
+    except requests.exceptions.HTTPError as e:
+        print(f"HTTPError: {e.response.status_code} - {e.response.reason}")
+        raise

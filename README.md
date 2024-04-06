@@ -19,8 +19,7 @@ This table is then populated with all the extracted incident records. Then this 
 - Day of the Week
 - Time of Day
 - Weather
-- Location
-- Rank
+- Location Rank
 - Side of Town
 - Incident Rank
 - Nature
