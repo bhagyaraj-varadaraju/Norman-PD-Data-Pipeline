@@ -47,6 +47,8 @@ This augmented data is then stored in a csv file called 'augmented_data.csv'. It
 ## How to run / Video walkthrough
 For running the program: **_pipenv run python assignment2.py --urls files.csv_**
 
+https://github.com/bhagyaraj-varadaraju/cis6930sp24-assignment2/assets/20358558/29f34e0a-adef-4677-beb3-6b2eef2d8862
+
 For running pytest: **_pipenv run python -m pytest_**
 
 ## Functions
