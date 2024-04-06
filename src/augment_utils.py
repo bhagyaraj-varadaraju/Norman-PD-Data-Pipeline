@@ -16,7 +16,7 @@ def get_time(time):
 # Determine the rank of the location based on the frequency of incidents at that location.
 def get_location_ranks(db):
     # Create a dictionary to store the rank of the location based on the frequency of incidents at that location.
-    location_rank = {}
+    location_ranks = {}
     cur = db.cursor()
     cur.execute('''SELECT incident_location, COUNT(*) FROM incidents GROUP BY incident_location ORDER BY COUNT(*) DESC, incident_location ASC''')
     rows = cur.fetchall()
@@ -26,21 +26,21 @@ def get_location_ranks(db):
     for i, row in enumerate(rows):
         # If the frequency of the incident is the same as the previous incident, assign the same rank.
         if i == 0:
-            location_rank[row[0]] = assigned_rank
+            location_ranks[row[0]] = assigned_rank
         elif rows[i-1][1] == row[1]:
-            location_rank[row[0]] = assigned_rank
+            location_ranks[row[0]] = assigned_rank
         # If the frequency of the incident is different from the previous incident, assign a new rank.
         else:
-            location_rank[row[0]] = i + 1
+            location_ranks[row[0]] = i + 1
             assigned_rank = i + 1
 
-    return location_rank
+    return location_ranks
 
 
 # Determine the rank of the incident based on the frequency of the incident nature.
 def get_incident_ranks(db):
     # Create a dictionary to store the rank of the incident based on the frequency of the incident nature.
-    incident_rank = {}
+    incident_ranks = {}
     cur = db.cursor()
     cur.execute('''SELECT nature, COUNT(*) FROM incidents GROUP BY nature ORDER BY COUNT(*) DESC, nature ASC''')
     rows = cur.fetchall()
@@ -50,15 +50,15 @@ def get_incident_ranks(db):
     for i, row in enumerate(rows):
         # If the frequency of the incident is the same as the previous incident, assign the same rank.
         if i == 0:
-            incident_rank[row[0]] = assigned_rank
+            incident_ranks[row[0]] = assigned_rank
         elif rows[i-1][1] == row[1]:
-            incident_rank[row[0]] = assigned_rank
+            incident_ranks[row[0]] = assigned_rank
         # If the frequency of the incident is different from the previous incident, assign a new rank.
         else:
-            incident_rank[row[0]] = i + 1
+            incident_ranks[row[0]] = i + 1
             assigned_rank = i + 1
 
-    return incident_rank
+    return incident_ranks
 
 
 # EMSSTAT is a boolean value based on the incident_ori value.
