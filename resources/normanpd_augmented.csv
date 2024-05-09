@@ -1,409 +1,435 @@
-Day of the Week	Time of Day	Weather	Location Rank	Side of Town	Incident Rank	Nature	EMSSTAT
-5	0	1	2	NW	2	Transfer/Interfacility	1
-5	0	1	66	SW	1	Traffic Stop	0
-5	0	1	66	NE	4	Contact a Subject	0
-5	0	1	19	E	27	Overdose/Poisoning	1
-5	0	1	19	E	27	Overdose/Poisoning	1
-5	0	1	19	NE	21	Convulsion/Seizure	1
-5	0	1	19	NE	21	Convulsion/Seizure	1
-5	0	1	66	E	6	Suspicious	0
-5	0	1	3	SE	2	Transfer/Interfacility	1
-5	0	1	19	W	33	Supplement Report	0
-5	0		66		1	Traffic Stop	0
-5	0	1	1	N	2	Transfer/Interfacility	1
-5	0	1	66	SW	4	Contact a Subject	0
-5	0		66		51	Reckless Driving	0
-5	1	1	66	N	6	Suspicious	0
-5	1	1	66	SE	7	Larceny	0
-5	1		66		1	Traffic Stop	0
-5	1	1	66	SE	51	Fire Carbon Monoxide Alarm	0
-5	1	1	2	NW	2	Transfer/Interfacility	1
-5	2	1	66	E	13	Alarm	0
-5	2	1	66	N	13	Burglary	0
-5	2	1	66	SW	13	Alarm	0
-5	2	1	66	W	1	Traffic Stop	0
-5	3	1	19	S	27	Overdose/Poisoning	1
-5	3	1	19	S	27	Overdose/Poisoning	1
-5	3	1	66	NE	6	Suspicious	0
-5	3	1	66	SE	9	Check Area	0
-5	3	1	66	NW	6	Suspicious	0
-5	4	1	66	NW	6	Suspicious	0
-5	4		66		4	Contact a Subject	0
-5	4	1	66	NW	5	Disturbance/Domestic	0
-5	4	1	66	E	3	Sick Person	1
-5	4	1	19	NE	16	Chest Pain	1
-5	4	1	19	NE	16	Chest Pain	1
-5	4	1	19	NW	3	Sick Person	1
-5	4	1	19	NW	3	Sick Person	1
-5	5	1	66	N	6	Suspicious	0
-5	5	1	66	SW	21	COP Relationships	0
-5	5	1	2	NW	2	Transfer/Interfacility	1
-5	5	1	66	NE	6	Suspicious	0
-5	5	1	66	NE	4	Contact a Subject	0
-5	6	2	19	SE	40	Abdominal Pains/Problems	1
-5	6	2	19	SE	40	Abdominal Pains/Problems	1
-5	6		66		51	Debris in Roadway	0
-5	6		66		33	Stolen Vehicle	0
-5	6	2	1	N	2	Transfer/Interfacility	1
-5	6	2	2	NW	2	Transfer/Interfacility	1
-5	7	2	66	SW	6	Suspicious	0
-5	7		66		27	MVA Non Injury	0
-5	7	1	19	W	11	Hemorrhage/Lacerations	1
-5	7	1	19	W	11	Hemorrhage/Lacerations	1
-5	7	1	5	N	11	Hemorrhage/Lacerations	1
-5	7	1	5	N	11	Hemorrhage/Lacerations	1
-5	7	2	66	SE	40	Trespassing	0
-5	7		66		6	Suspicious	0
-5	7	2	66	W	13	Alarm	0
-5	8	3	66	SE	21	Animal at Large	0
-5	8		66		27	Animal Dead	0
-5	8		66		21	Animal at Large	0
-5	8		66		21	Animal at Large	0
-5	8		66		27	MVA Non Injury	0
-5	8	3	19	E	16	Medical Call Pd Requested	1
-5	8	3	19	E	16	Medical Call Pd Requested	1
-5	8	3	66	SW	7	Larceny	0
-5	8	3	66	NE	7	Larceny	0
-5	8	3	66	W	21	Harassment / Threats Report	0
-5	8	3	66	SE	51	Barking Dog	0
-5	8	3	19	W	3	Sick Person	1
-5	8	3	66	W	5	Disturbance/Domestic	0
-5	8	3	66	W	13	Burglary	0
-5	8	3	19	SE	21	Convulsion/Seizure	1
-5	8	3	19	SE	51	Assist Fire	1
-5	8	3	9	W	11	Cardiac Respritory Arrest	1
-5	8	3	9	W	11	Cardiac Respritory Arrest	1
-5	8	3	2	NW	2	Transfer/Interfacility	1
-5	9	2	66	N	7	Larceny	0
-5	9		66		40	Animal Livestock	0
-5	9		66		16	Parking Problem	0
-5	9	2	66	W	51	Animal Injured	0
-5	9		66		5	Disturbance/Domestic	0
-5	9	2	9	NW	4	Contact a Subject	0
-5	9	2	66	SE	33	Mutual Aid	0
-5	9		9		2	Transfer/Interfacility	1
-5	9	3	66	SE	1	Traffic Stop	0
-5	9	2	66	NE	21	Harassment / Threats Report	0
-5	9	2	66	SE	1	Traffic Stop	0
-5	9	2	19	NE	51	Drug Violation	0
-5	9	2	66	W	9	Check Area	0
-5	9	2	66	SW	33	COP Problem Solving	0
-5	9		9		2	Transfer/Interfacility	1
-5	9	2	66	SE	40	Item Assignment	0
-5	9	2	66	SW	51	Animal Complaint	0
-5	9	2	66	SW	1	Traffic Stop	0
-5	9	2	66	N	21	Public Assist	0
-5	10	1	66	NW	1	Traffic Stop	0
-5	10		66		33	Stolen Vehicle	0
-5	10	1	2	NW	2	Transfer/Interfacility	1
-5	10	1	9	NW	33	Assault	0
-5	10	1	19	SE	27	Fraud	0
-5	10	1	66	SE	27	Animal Dead	0
-5	10	2	19	E	4	Contact a Subject	0
-5	10	1	19	N	16	Chest Pain	1
-5	10	1	19	N	16	Chest Pain	1
-5	10	1	66	S	8	Falls	1
-5	10	1	1	N	2	Transfer/Interfacility	1
-5	10	1	66	SE	21	Harassment / Threats Report	0
-5	10	1	66	S	16	Parking Problem	0
-5	10	1	66	SE	16	Parking Problem	0
-5	10	2	19	E	3	Sick Person	1
-5	10	2	19	E	3	Sick Person	1
-5	10	1	5	N	8	Falls	1
-5	10	1	5	N	8	Falls	1
-5	10	2	66	NE	33	Animal Trapped	0
-5	10	1	6	E	40	Found Item	0
-5	11	0	19	W	7	Larceny	0
-5	11	0	19	W	11	Hemorrhage/Lacerations	1
-5	11	0	19	W	11	Hemorrhage/Lacerations	1
-5	11	0	9	NW	33	Assault	0
-5	11	0	66	W	5	Disturbance/Domestic	0
-5	11	0	19	S	3	Sick Person	1
-5	11	0	19	S	3	Sick Person	1
-5	11	0	66	SE	1	Traffic Stop	0
-5	11	0	66	E	40	Item Assignment	0
-5	11	0	19	W	3	Sick Person	1
-5	11	0	19	W	3	Sick Person	1
-5	11	0	66	W	21	Animal at Large	0
-5	11	0	66	NE	27	Fraud	0
-5	11	0	19	W	4	Contact a Subject	0
-5	11	0	66	NW	1	Traffic Stop	0
-5	11		66		1	Traffic Stop	0
-5	11	0	19	W	16	Breathing Problems	1
-5	11	0	19	W	16	Breathing Problems	1
-5	11	0	66	SE	5	Disturbance/Domestic	0
-5	11		66		51	Runaway or Lost Child	0
-5	11		66		33	Supplement Report	0
-5	12		66		10	Follow Up	0
-5	12	2	66	SE	6	Suspicious	0
-5	12	1	66	NE	33	Animal Trapped	0
-5	12	1	66	W	7	Larceny	0
-5	12	1	19	NW	3	Sick Person	1
-5	12	1	19	NW	3	Sick Person	1
-5	12	2	66	E	33	Animal Trapped	0
-5	12	2	66	SE	5	Disturbance/Domestic	0
-5	12		66		1	Traffic Stop	0
-5	12	1	66	N	27	MVA Non Injury	0
-5	12	2	8	SE	3	Sick Person	1
-5	12	2	8	SE	3	Sick Person	1
-5	12	2	8	SE	5	Disturbance/Domestic	1
-5	12	2	8	SE	13	Burglary	1
-5	12		9		27	MVA With Injuries	1
-5	12		9		27	MVA With Injuries	1
-5	12		9		21	Hit and Run	1
-5	12	2	66	SE	21	Animal at Large	0
-5	12	1	9	W	51	EMS Mutual Aid	1
-5	12	1	19	N	21	Hit and Run	0
-5	12	2	66	S	33	Mutual Aid	0
-5	12	2	66	SE	33	COP Problem Solving	0
-5	12	1	66	W	21	Public Assist	0
-5	12	2	19	SE	1	Traffic Stop	0
-5	12	1	66	E	3	Sick Person	1
-5	13		66		9	Check Area	0
-5	13	0	19	SW	8	Falls	1
-5	13	0	19	SW	8	Falls	1
-5	13	0	2	NW	2	Transfer/Interfacility	1
-5	13	0	1	N	2	Transfer/Interfacility	1
-5	13	0	66	E	40	Trespassing	0
-5	13	0	66	NE	51		0
-5	13	0	66	SE	16	Parking Problem	0
-5	13	0	3	SE	3	Sick Person	1
-5	13	0	3	SE	3	Sick Person	1
-5	13	0	3	SE	10	Follow Up	1
-5	13		66		9	Check Area	0
-5	13	0	19	NE	51	Fight	0
-5	13	0	66	E	1	Traffic Stop	0
-5	13	0	66	NE	4	Contact a Subject	0
-5	13		66		21	Harassment / Threats Report	0
-5	13	0	1	N	2	Transfer/Interfacility	1
-5	13	0	66	W	1	Traffic Stop	0
-5	13	1	19	NE	40	Diabetic Problems	1
-5	13	1	19	NE	40	Diabetic Problems	1
-5	13		66		4	Contact a Subject	0
-5	13	0	66	W	7	Larceny	0
-5	13		66		27	MVA Non Injury	0
-5	13	0	66	SE	33	COP Problem Solving	0
-5	13	0	66	SE	4	Contact a Subject	0
-5	13	0	66	SE	1	Traffic Stop	0
-5	13	0	66	SE	13	Burglary	0
-5	13		66		1	Traffic Stop	0
-5	13	0	1	N	2	Transfer/Interfacility	1
-5	13		66		16	Parking Problem	0
-5	13	0	66	SE	4	Contact a Subject	0
-5	13	0	66	W	1	Traffic Stop	0
-5	14	0	66	NW	10	Follow Up	0
-5	14	0	19	SE	7	Larceny	0
-5	14	0	66	S	1	Traffic Stop	0
-5	14	0	66	SE	1	Traffic Stop	0
-5	14		66		13	Welfare Check	0
-5	14	0	66	SE	1	Traffic Stop	0
-5	14	0	9	NW	10	Follow Up	0
-5	14	0	1	N	2	Transfer/Interfacility	1
-5	14	0	19	W	40	Found Item	0
-5	14	0	19	SW	27	Fraud	0
-5	14		66		16	Parking Problem	0
-5	14	0	1	N	2	Transfer/Interfacility	1
-5	14	0	66	W	16	911 Call Nature Unknown	0
-5	14	0	66	W	5	Disturbance/Domestic	0
-5	14	0	66	N	51	Stake Out	0
-5	14	0	66	SE	9	Check Area	0
-5	14	0	19	SE	1	Traffic Stop	0
-5	14		66		1	Traffic Stop	0
-5	14		66		27	Animal Dead	0
-5	14	0	19	E	27	Allergies/Envenomations	1
-5	14	0	19	E	27	Allergies/Envenomations	1
-5	14	0	3	SE	3	Sick Person	1
-5	14	0	3	SE	3	Sick Person	1
-5	14	0	66	S	16	911 Call Nature Unknown	0
-5	14	0	2	NW	2	Transfer/Interfacility	1
-5	14	0	66	S	4	Contact a Subject	0
-5	14	0	1	N	2	Transfer/Interfacility	1
-5	14	0	66	W	4	Contact a Subject	0
-5	14	0	66	SE	33	Stolen Vehicle	0
-5	14	0	66	S	10	Follow Up	0
-5	15	0	19	NW	27	Allergies/Envenomations	1
-5	15	0	19	NW	27	Allergies/Envenomations	1
-5	15	0	66	E	40	Animal Livestock	0
-5	15	0	66	W	1	Traffic Stop	0
-5	15	0	66	W	13	Alarm	0
-5	15	0	66	NE	1	Traffic Stop	0
-5	15	0	9	NW	5	Disturbance/Domestic	0
-5	15	0	66	SE	7	Larceny	0
-5	15	0	66	E	5	Disturbance/Domestic	0
-5	15		66		4	Contact a Subject	0
-5	15	0	66	SE	33	Mutual Aid	0
-5	15	0	66	W	1	Traffic Stop	0
-5	15		66		51	Missing Person	0
-5	15		66		51	Road Rage	0
-5	15	0	19	W	33	Assault	0
-5	15		66		27	Animal Dead	0
-5	15	0	1	N	2	Transfer/Interfacility	1
-5	15	0	66	NE	21	COP Relationships	0
-5	15	0	66	W	4	Contact a Subject	0
-5	15	0	66	W	1	Traffic Stop	0
-5	15	0	1	N	51	Escort/Transport	0
-5	15	0	19	SW	7	Larceny	0
-5	15	0	66	E	13	Welfare Check	0
-5	16	0	2	NW	2	Transfer/Interfacility	1
-5	16		9		27	MVA With Injuries	1
-5	16		9		27	MVA With Injuries	1
-5	16		9		40	Drunk Driver	1
-5	16	0	19	SE	8	Falls	1
-5	16	0	19	SE	8	Falls	1
-5	16		66		1	Traffic Stop	0
-5	16	0	6	NW	5	Disturbance/Domestic	0
-5	16	0	9	S	16	911 Call Nature Unknown	0
-5	16	0	3	SE	2	Transfer/Interfacility	1
-5	16	0	2	NW	2	Transfer/Interfacility	1
-5	16	0	3	SE	2	Transfer/Interfacility	1
-5	16	0	9	W	11	Cardiac Respritory Arrest	1
-5	16	0	9	W	11	Cardiac Respritory Arrest	1
-5	16	0	9	W	40	Body Reported	1
-5	16	0	2	NW	2	Transfer/Interfacility	1
-5	16	0	66	N	51	Civil Standby	0
-5	16	0	66	SW	6	Suspicious	0
-5	16	0	66	N	40	Open Door/Premises Check	0
-5	16	0	66	NW	4	Contact a Subject	0
-5	16	0	66	W	16	911 Call Nature Unknown	0
-5	16	0	66	SE	51	Alarm Holdup/Panic	0
-5	16	0	3	SE	8	Falls	1
-5	16	0	3	SE	8	Falls	1
-5	16	0	3	SE	2	Transfer/Interfacility	1
-5	17	0	66	SW	9	Check Area	0
-5	17		66		21	Hit and Run	0
-5	17	0	1	N	2	Transfer/Interfacility	1
-5	17	0	19	SW	51	Vandalism	0
-5	17	0	66	NE	21	COP Relationships	0
-5	17		66		21	COP Relationships	0
-5	17	0	66	NE	21	COP Relationships	0
-5	17	0	66	W	27	Fraud	0
-5	17	0	19	SW	6	Suspicious	0
-5	17	0	66	SE	21	Public Assist	0
-5	17	0	66	W	21	Hit and Run	0
-5	17		66		10	Follow Up	0
-5	17	0	19	E	11	Hemorrhage/Lacerations	1
-5	17	0	19	E	11	Hemorrhage/Lacerations	1
-5	17	0	19	W	3	Sick Person	1
-5	17	0	19	W	3	Sick Person	1
-5	17		66		33	Supplement Report	0
-5	17	0	19	SE	13	Burglary	0
-5	17	0	19	SW	10	Follow Up	0
-5	17		66		1	Traffic Stop	0
-5	17		66		1	Traffic Stop	0
-5	17	0	2	NW	2	Transfer/Interfacility	1
-5	17	0	66	SE	51	Indecent Exposure	0
-5	17	0	1	N	2	Transfer/Interfacility	1
-5	17	0	66	SW	51	Public Intoxication	0
-5	17	0	66	W	3	Sick Person	1
-5	17	0	19	W	3	Sick Person	1
-5	17	0	66	W	5	Disturbance/Domestic	0
-5	17	0	5	N	16	Chest Pain	1
-5	17	0	5	N	16	Chest Pain	1
-5	17	0	19	W	11	Cardiac Respritory Arrest	1
-5	17	0	19	W	11	Cardiac Respritory Arrest	1
-5	17	0	19	SW	6	Suspicious	0
-5	18	1	1	N	2	Transfer/Interfacility	1
-5	18		66		21	Hit and Run	0
-5	18	0	19	SE	3	Sick Person	1
-5	18	0	19	SE	3	Sick Person	1
-5	18	1	6	E	5	Disturbance/Domestic	0
-5	18	1	66	SE	7	Larceny	0
-5	18		19		8	Falls	1
-5	18		19		8	Falls	1
-5	18		66		51	Fire Gas Leak	0
-5	18	1	6	E	3	Sick Person	1
-5	18	1	6	E	3	Sick Person	1
-5	18	1	19	N	21	Harassment / Threats Report	0
-5	18		9		2	Transfer/Interfacility	1
-5	18		66		13	Welfare Check	0
-5	18	1	19	E	21	Convulsion/Seizure	1
-5	18	1	19	E	21	Convulsion/Seizure	1
-5	18	1	19	SE	5	Disturbance/Domestic	0
-5	18	1	66	N	5	Disturbance/Domestic	0
-5	19	0	66	NE	9	Check Area	0
-5	19	1	9	E	11	Cardiac Respritory Arrest	1
-5	19	1	9	E	11	Cardiac Respritory Arrest	1
-5	19	1	9	E	40	Body Reported	1
-5	19	0	66	W	51	Shots Heard	0
-5	19	1	66	SE	10	Follow Up	0
-5	19	1	66	SW	13	Welfare Check	0
-5	19	0	66	W	13	Alarm	0
-5	19	1	9	S	16	911 Call Nature Unknown	0
-5	19	0	1	N	2	Transfer/Interfacility	1
-5	19	1	66	SE	4	Contact a Subject	0
-5	19	1	66	SW	13	Burglary	0
-5	19	1	66	SE	6	Suspicious	0
-5	19	1	9	S	16	911 Call Nature Unknown	0
-5	19	1	66	SE	6	Suspicious	0
-5	19	1	3	SE	2	Transfer/Interfacility	1
-5	19	0	66	N	1	Traffic Stop	0
-5	19	0	66	E	21	Public Assist	0
-5	20	0	19	N	16	Medical Call Pd Requested	1
-5	20	0	19	N	16	Medical Call Pd Requested	1
-5	20		66		13	Welfare Check	0
-5	20		66		40	Drunk Driver	0
-5	20	0	66	N	1	Traffic Stop	0
-5	20	0	3	SE	2	Transfer/Interfacility	1
-5	20	0	66	S	51	Fire Alarm	0
-5	20	0	2	NW	2	Transfer/Interfacility	1
-5	20	0	19	W	5	Disturbance/Domestic	0
-5	20		66		1	Traffic Stop	0
-5	20	0	66	SE	6	Suspicious	0
-5	20	0	66	E	13	Burglary	0
-5	20	0	66	E	4	Contact a Subject	0
-5	20	0	6	E	5	Disturbance/Domestic	0
-5	20	0	19	NE	16	Breathing Problems	1
-5	20	0	19	NE	16	Breathing Problems	1
-5	21	1	19	N	40	Heart Problems/AICD	1
-5	21	1	19	N	40	Heart Problems/AICD	1
-5	21	1	66	SE	5	Disturbance/Domestic	0
-5	21	1	9	NW	40	Open Door/Premises Check	0
-5	21	1	19	E	16	Medical Call Pd Requested	1
-5	21	1	19	E	16	Medical Call Pd Requested	1
-5	21	1	19	NW	16	Breathing Problems	1
-5	21	1	19	NW	16	Breathing Problems	1
-5	21	1	66	SE	4	Contact a Subject	0
-5	21	1	3	SE	7	Larceny	0
-5	21	1	6	NW	13	Welfare Check	0
-5	21	1	66	SE	1	Traffic Stop	0
-5	21	1	2	NW	2	Transfer/Interfacility	1
-5	21	1	3	SE	7	Larceny	0
-5	21	1	3	SE	33	Motorist Assist	0
-5	22	0	66	N	1	Traffic Stop	0
-5	22		66		1	Traffic Stop	0
-5	22	0	6	NW	3	Sick Person	1
-5	22	0	6	NW	3	Sick Person	1
-5	22	0	6	NW	5	Disturbance/Domestic	1
-5	22	0	66	SE	1	Traffic Stop	0
-5	22	0	1	N	2	Transfer/Interfacility	1
-5	22		66		13	Welfare Check	0
-5	22	0	1	N	2	Transfer/Interfacility	1
-5	22	0	66	W	6	Suspicious	0
-5	22	0	66	SW	6	Suspicious	0
-5	22		66		4	Contact a Subject	0
-5	22	0	19	N	40	Back Pain	1
-5	22	0	19	N	40	Back Pain	1
-5	22	0	66	SE	4	Contact a Subject	0
-5	22	0	19	E	4	Contact a Subject	0
-5	22	0	66	SW	13	Alarm	0
-5	22	0	66	NE	1	Traffic Stop	0
-5	22	0	66	W	21	Public Assist	0
-5	22	0	66	W	13	Alarm	0
-5	22	0	9	SE	3	Sick Person	1
-5	22	0	9	SE	3	Sick Person	1
-5	22	0	9	SE	4	Contact a Subject	1
-5	22	0	1	N	2	Transfer/Interfacility	1
-5	22	0	66	SE	1	Traffic Stop	0
-5	23	1	66	NE	10	Follow Up	0
-5	23		66		33	Motorist Assist	0
-5	23	1	66	S	1	Traffic Stop	0
-5	23	1	66	SW	9	Check Area	0
-5	23	1	66	SE	5	Disturbance/Domestic	0
-5	23	1	66	S	1	Traffic Stop	0
-5	23	1	66	W	1	Traffic Stop	0
-5	23	1	66	W	6	Suspicious	0
-5	23	1	19	SW	51	Noise Complaint	0
-5	23	1	66	SE	1	Traffic Stop	0
-5	23	1	19	SW	9	Check Area	0
-5	23		66		33	Motorist Assist	0
-5	23	1	66	E	9	Check Area	0
+Date (YYYY-MM-DD)	Day of the Week	Time of Day	Location Rank	Incident Rank	Nature	EMSSTAT
+2024-04-03	4	0	76	20	Motorist Assist	0
+2024-04-03	4	0	12	28	Alarm Holdup/Panic	0
+2024-04-03	4	0	76	3	Contact a Subject	0
+2024-04-03	4	0	76	1	Traffic Stop	0
+2024-04-03	4	0	76	14	Public Assist	0
+2024-04-03	4	0	25	43	911 Call Nature Unknown	0
+2024-04-03	4	0	76	3	Contact a Subject	0
+2024-04-03	4	0	12	3	Contact a Subject	0
+2024-04-03	4	0	25	20	Overdose/Poisoning	1
+2024-04-03	4	0	25	20	Overdose/Poisoning	1
+2024-04-03	4	0	76	1	Traffic Stop	0
+2024-04-03	4	0	76	1	Traffic Stop	0
+2024-04-03	4	0	76	3	Contact a Subject	0
+2024-04-03	4	1	25	7	Sick Person	1
+2024-04-03	4	1	25	7	Sick Person	1
+2024-04-03	4	1	1	14	Trespassing	0
+2024-04-03	4	1	76	55	Loud Party	0
+2024-04-03	4	1	25	1	Traffic Stop	0
+2024-04-03	4	1	25	1	Traffic Stop	0
+2024-04-03	4	1	12	5	Disturbance/Domestic	0
+2024-04-03	4	1	12	3	Contact a Subject	0
+2024-04-03	4	1	76	1	Traffic Stop	0
+2024-04-03	4	1	76	5	Disturbance/Domestic	0
+2024-04-03	4	1	25	1	Traffic Stop	0
+2024-04-03	4	1	25	1	Traffic Stop	0
+2024-04-03	4	1	76	55	Public Intoxication	0
+2024-04-03	4	1	76	10	Suspicious	0
+2024-04-03	4	1	76	1	Traffic Stop	0
+2024-04-03	4	1	25	23	Noise Complaint	0
+2024-04-03	4	1	25	7	MVA With Injuries	1
+2024-04-03	4	1	25	7	MVA With Injuries	1
+2024-04-03	4	1	76	4	Welfare Check	0
+2024-04-03	4	2	76	28	Burglary	0
+2024-04-03	4	2	12	5	Disturbance/Domestic	0
+2024-04-03	4	2	25	6	Alarm	0
+2024-04-03	4	2	76	1	Traffic Stop	0
+2024-04-03	4	2	76	55	Warrant Service	0
+2024-04-03	4	2	76	1	Traffic Stop	0
+2024-04-03	4	2	76	1	Traffic Stop	0
+2024-04-03	4	2	76	1	Traffic Stop	0
+2024-04-03	4	2	76	14	Trespassing	0
+2024-04-03	4	2	76	10	Suspicious	0
+2024-04-03	4	3	9	23	Hemorrhage/Lacerations	1
+2024-04-03	4	3	9	23	Hemorrhage/Lacerations	1
+2024-04-03	4	3	9	16	Follow Up	1
+2024-04-03	4	3	76	3	Contact a Subject	0
+2024-04-03	4	3	12	12	Check Area	0
+2024-04-03	4	3	5	2	Transfer/Interfacility	1
+2024-04-03	4	3	25	55	Barking Dog	0
+2024-04-03	4	3	76	1	Traffic Stop	0
+2024-04-03	4	3	76	1	Traffic Stop	0
+2024-04-03	4	3	76	1	Traffic Stop	0
+2024-04-03	4	4	76	23	Noise Complaint	0
+2024-04-03	4	4	76	1	Traffic Stop	0
+2024-04-03	4	4	76	3	Contact a Subject	0
+2024-04-03	4	4	25	43	Diabetic Problems	1
+2024-04-03	4	4	25	43	Diabetic Problems	1
+2024-04-03	4	5	76	14	Public Assist	0
+2024-04-03	4	5	76	1	Traffic Stop	0
+2024-04-03	4	5	76	3	Contact a Subject	0
+2024-04-03	4	5	25	6	Alarm	0
+2024-04-03	4	5	25	6	Alarm	0
+2024-04-03	4	5	76	6	Alarm	0
+2024-04-03	4	6	76	10	Suspicious	0
+2024-04-03	4	6	76	20	Motorist Assist	0
+2024-04-03	4	6	76	6	Alarm	0
+2024-04-03	4	6	76	6	Alarm	0
+2024-04-03	4	7	25	16	Unconscious/Fainting	1
+2024-04-03	4	7	25	16	Falls	1
+2024-04-03	4	7	76	1	Traffic Stop	0
+2024-04-03	4	7	12	13	Breathing Problems	1
+2024-04-03	4	7	12	13	Breathing Problems	1
+2024-04-03	4	7	12	7	Sick Person	1
+2024-04-03	4	7	25	12	Check Area	0
+2024-04-03	4	7	2	2	Transfer/Interfacility	1
+2024-04-03	4	7	76	6	Alarm	0
+2024-04-03	4	7	76	36	COP DDACTS	0
+2024-04-03	4	7	76	1	Traffic Stop	0
+2024-04-03	4	7	76	1	Traffic Stop	0
+2024-04-03	4	7	76	1	Traffic Stop	0
+2024-04-03	4	8	25	3	Contact a Subject	0
+2024-04-03	4	8	5	7	MVA Non Injury	0
+2024-04-03	4	8	76	1	Traffic Stop	0
+2024-04-03	4	8	76	1	Traffic Stop	0
+2024-04-03	4	8	76	28	Stolen Vehicle	0
+2024-04-03	4	8	25	7	Sick Person	1
+2024-04-03	4	8	25	7	Sick Person	1
+2024-04-03	4	8	76	1	Traffic Stop	0
+2024-04-03	4	8	76	36	COP DDACTS	0
+2024-04-03	4	8	76	1	Traffic Stop	0
+2024-04-03	4	8	1	2	Transfer/Interfacility	1
+2024-04-03	4	8	76	1	Traffic Stop	0
+2024-04-03	4	8	76	1	Traffic Stop	0
+2024-04-03	4	8	25	10	Suspicious	0
+2024-04-03	4	8	76	1	Traffic Stop	0
+2024-04-03	4	8	76	1	Traffic Stop	0
+2024-04-03	4	8	25	7	Sick Person	1
+2024-04-03	4	8	25	7	Sick Person	1
+2024-04-03	4	8	25	36	Vandalism	0
+2024-04-03	4	8	25	12	Check Area	0
+2024-04-03	4	8	76	1	Traffic Stop	0
+2024-04-03	4	8	76	3	Contact a Subject	0
+2024-04-03	4	8	76	28	Burglary	0
+2024-04-03	4	9	25	43	Supplement Report	0
+2024-04-03	4	9	76	23	Animal at Large	0
+2024-04-03	4	9	76	16	Harassment / Threats Report	0
+2024-04-03	4	9	25	36	COP Relationships	0
+2024-04-03	4	9	25	36	COP Relationships	0
+2024-04-03	4	9	25	28	Hit and Run	0
+2024-04-03	4	9	12	7	Sick Person	1
+2024-04-03	4	9	12	7	Sick Person	1
+2024-04-03	4	9	12	5	Disturbance/Domestic	1
+2024-04-03	4	9	76	1	Traffic Stop	0
+2024-04-03	4	9	76	55	Pick Up Items	0
+2024-04-03	4	9	76	6	Alarm	0
+2024-04-03	4	9	76	23	Animal at Large	0
+2024-04-03	4	9	25	36	Vandalism	0
+2024-04-03	4	9	3	7	MVA Non Injury	0
+2024-04-03	4	9	76	11	Larceny	0
+2024-04-03	4	9	12	7	MVA With Injuries	1
+2024-04-03	4	9	12	7	MVA With Injuries	1
+2024-04-03	4	9	12	7	MVA With Injuries	1
+2024-04-03	4	9	5	2	Transfer/Interfacility	1
+2024-04-03	4	9	76	3	Contact a Subject	0
+2024-04-03	4	9	2	4	Welfare Check	0
+2024-04-03	4	9	76	28	Alarm Holdup/Panic	0
+2024-04-03	4	9	76	1	Traffic Stop	0
+2024-04-03	4	9	76	55	Fire Controlled Burn	0
+2024-04-03	4	10	1	2	Transfer/Interfacility	1
+2024-04-03	4	10	76	23	Animal at Large	0
+2024-04-03	4	10	76	43	Animal Dead	0
+2024-04-03	4	10	76	7	MVA Non Injury	0
+2024-04-03	4	10	76	10	Suspicious	0
+2024-04-03	4	10	76	43	Animal Dead	0
+2024-04-03	4	10	2	2	Transfer/Interfacility	1
+2024-04-03	4	10	76	3	Contact a Subject	0
+2024-04-03	4	10	25	13	Breathing Problems	1
+2024-04-03	4	10	25	7	Sick Person	1
+2024-04-03	4	10	76	14	Trespassing	0
+2024-04-03	4	10	25	36	Vandalism	0
+2024-04-03	4	10	25	43	COP Problem Solving	0
+2024-04-03	4	10	76	36	Animal Complaint	0
+2024-04-03	4	10	1	2	Transfer/Interfacility	1
+2024-04-03	4	10	76	5	Disturbance/Domestic	0
+2024-04-03	4	10	25	28	Medical Call Pd Requested	1
+2024-04-03	4	10	25	28	Medical Call Pd Requested	1
+2024-04-03	4	10	76	11	Larceny	0
+2024-04-03	4	10	76	43	Animal Trapped	0
+2024-04-03	4	10	76	23	Animal at Large	0
+2024-04-03	4	11	76	1	Traffic Stop	0
+2024-04-03	4	11	76	20	Motorist Assist	0
+2024-04-03	4	11	76	23	Civil Standby	0
+2024-04-03	4	11	76	28	Hit and Run	0
+2024-04-03	4	11	76	11	Larceny	0
+2024-04-03	4	11	76	3	Contact a Subject	0
+2024-04-03	4	11	76	14	Trespassing	0
+2024-04-03	4	11	25	28	Stolen Vehicle	0
+2024-04-03	4	11	25	16	Follow Up	0
+2024-04-03	4	11	76	23	Fraud	0
+2024-04-03	4	11	3	43	Escort/Transport	0
+2024-04-03	4	11	12	55	Assault	0
+2024-04-03	4	11	76	12	Check Area	0
+2024-04-03	4	11	25	36	Runaway or Lost Child	0
+2024-04-03	4	11	1	2	Transfer/Interfacility	1
+2024-04-03	4	11	25	5	Disturbance/Domestic	0
+2024-04-03	4	11	76	1	Traffic Stop	0
+2024-04-03	4	11	76	3	Contact a Subject	0
+2024-04-03	4	12	76	7	MVA Non Injury	0
+2024-04-03	4	12	25	7	Sick Person	1
+2024-04-03	4	12	25	7	Sick Person	1
+2024-04-03	4	12	4	2	Transfer/Interfacility	1
+2024-04-03	4	12	76	1	Traffic Stop	0
+2024-04-03	4	12	76	3	Contact a Subject	0
+2024-04-03	4	12	12	28	Burglary	0
+2024-04-03	4	12	25	3	Contact a Subject	0
+2024-04-03	4	12	3	3	Contact a Subject	0
+2024-04-03	4	12	25	10	Suspicious	0
+2024-04-03	4	12	12	14	Public Assist	0
+2024-04-03	4	12	76	1	Traffic Stop	0
+2024-04-03	4	12	76	20	Motorist Assist	0
+2024-04-03	4	12	76	3	Contact a Subject	0
+2024-04-03	4	12	25	20	Overdose/Poisoning	1
+2024-04-03	4	12	25	20	Overdose/Poisoning	1
+2024-04-03	4	12	12	43	Cardiac Respritory Arrest	1
+2024-04-03	4	12	12	43	Cardiac Respritory Arrest	1
+2024-04-03	4	12	12	4	Welfare Check	1
+2024-04-03	4	12	76	7	MVA Non Injury	0
+2024-04-03	4	12	76	36	COP DDACTS	0
+2024-04-03	4	12	76	4	Welfare Check	0
+2024-04-03	4	12	76	4	Welfare Check	0
+2024-04-03	4	12	76	3	Contact a Subject	0
+2024-04-03	4	13	76	11	Larceny	0
+2024-04-03	4	13	76	4	Welfare Check	0
+2024-04-03	4	13	76	23	Fraud	0
+2024-04-03	4	13	76	1	Traffic Stop	0
+2024-04-03	4	13	76	1	Traffic Stop	0
+2024-04-03	4	13	76	20	Motorist Assist	0
+2024-04-03	4	13	76	1	Traffic Stop	0
+2024-04-03	4	13	76	55	Found Item	0
+2024-04-03	4	13	76	16	Harassment / Threats Report	0
+2024-04-03	4	13	76	1	Traffic Stop	0
+2024-04-03	4	13	2	2	Transfer/Interfacility	1
+2024-04-03	4	13	3	20	Convulsion/Seizure	1
+2024-04-03	4	13	3	20	Convulsion/Seizure	1
+2024-04-03	4	13	3	55	Assist Fire	1
+2024-04-03	4	13	76	1	Traffic Stop	0
+2024-04-03	4	13	25	11	Larceny	0
+2024-04-03	4	13	76	23	Fraud	0
+2024-04-03	4	13	76	1	Traffic Stop	0
+2024-04-03	4	13	76	36	Open Door/Premises Check	0
+2024-04-03	4	13	25	12	Check Area	0
+2024-04-03	4	13	76	43	Animal Trapped	0
+2024-04-03	4	13	76	1	Traffic Stop	0
+2024-04-03	4	13	76	5	Disturbance/Domestic	0
+2024-04-03	4	13	76	23	Fraud	0
+2024-04-03	4	13	76	1	Traffic Stop	0
+2024-04-03	4	13	5	2	Transfer/Interfacility	1
+2024-04-03	4	13	76	1	Traffic Stop	0
+2024-04-03	4	13	76	36	Open Door/Premises Check	0
+2024-04-03	4	13	25	5	Disturbance/Domestic	0
+2024-04-03	4	13	76	14	Public Assist	0
+2024-04-03	4	13	76	4	Welfare Check	0
+2024-04-03	4	13	25	28	Chest Pain	1
+2024-04-03	4	13	25	28	Chest Pain	1
+2024-04-03	4	14	76	1	Traffic Stop	0
+2024-04-03	4	14	2	2	Transfer/Interfacility	1
+2024-04-03	4	14	76	36	Open Door/Premises Check	0
+2024-04-03	4	14	76	36	Animal Complaint	0
+2024-04-03	4	14	76	28	Burglary	0
+2024-04-03	4	14	76	3	Contact a Subject	0
+2024-04-03	4	14	76	28	Parking Problem	0
+2024-04-03	4	14	1	2	Transfer/Interfacility	1
+2024-04-03	4	14	76	28	Parking Problem	0
+2024-04-03	4	14	76	28	Parking Problem	0
+2024-04-03	4	14	76	55	Mutual Aid	0
+2024-04-03	4	14	12	7	MVA With Injuries	1
+2024-04-03	4	14	12	7	MVA With Injuries	1
+2024-04-03	4	14	12	7	MVA Non Injury	1
+2024-04-03	4	14	76	16	Follow Up	0
+2024-04-03	4	14	25	20	Convulsion/Seizure	1
+2024-04-03	4	14	25	20	Convulsion/Seizure	1
+2024-04-03	4	14	25	16	Falls	1
+2024-04-03	4	14	25	16	Falls	1
+2024-04-03	4	14	76	11	Larceny	0
+2024-04-03	4	14	76	23	Fraud	0
+2024-04-03	4	14	76	14	Public Assist	0
+2024-04-03	4	14	76	23	Animal at Large	0
+2024-04-03	4	15	5	16	Follow Up	0
+2024-04-03	4	15	76	28	Parking Problem	0
+2024-04-03	4	15	2	2	Transfer/Interfacility	1
+2024-04-03	4	15	5	23	Civil Standby	0
+2024-04-03	4	15	2	2	Transfer/Interfacility	1
+2024-04-03	4	15	76	23	Civil Standby	0
+2024-04-03	4	15	12	14	Public Assist	0
+2024-04-03	4	15	76	1	Traffic Stop	0
+2024-04-03	4	15	4	2	Transfer/Interfacility	1
+2024-04-03	4	15	76	43	Supplement Report	0
+2024-04-03	4	15	5	43	Escort/Transport	0
+2024-04-03	4	15	2	2	Transfer/Interfacility	1
+2024-04-03	4	15	76	1	Traffic Stop	0
+2024-04-03	4	15	76	11	Larceny	0
+2024-04-03	4	15	76	1	Traffic Stop	0
+2024-04-03	4	15	25	10	Suspicious	0
+2024-04-03	4	15	76	5	Disturbance/Domestic	0
+2024-04-03	4	16	12	43	Shooting Stabbing Penetrating	1
+2024-04-03	4	16	12	43	Shooting Stabbing Penetrating	1
+2024-04-03	4	16	12	55	Shooting	1
+2024-04-03	4	16	25	14	Trespassing	0
+2024-04-03	4	16	4	2	Transfer/Interfacility	1
+2024-04-03	4	16	25	13	Breathing Problems	1
+2024-04-03	4	16	25	13	Breathing Problems	1
+2024-04-03	4	16	4	2	Transfer/Interfacility	1
+2024-04-03	4	16	76	43	Fire Alarm	0
+2024-04-03	4	16	76	28	Stolen Vehicle	0
+2024-04-03	4	16	76	14	Trespassing	0
+2024-04-03	4	16	12	28	Stolen Vehicle	0
+2024-04-03	4	16	76	4	Welfare Check	0
+2024-04-03	4	16	3	36	COP Relationships	0
+2024-04-03	4	16	76	10	Suspicious	0
+2024-04-03	4	16	76	36	Animal Complaint	0
+2024-04-03	4	16	76	3	Contact a Subject	0
+2024-04-03	4	16	1	2	Transfer/Interfacility	1
+2024-04-03	4	16	76	28	Alarm Holdup/Panic	0
+2024-04-03	4	16	76	16	Harassment / Threats Report	0
+2024-04-03	4	16	25	16	Follow Up	0
+2024-04-03	4	16	76	6	Alarm	0
+2024-04-03	4	17	76	12	Check Area	0
+2024-04-03	4	17	3	16	Harassment / Threats Report	0
+2024-04-03	4	17	76	5	Disturbance/Domestic	0
+2024-04-03	4	17	25	11	Larceny	0
+2024-04-03	4	17	25	11	Larceny	0
+2024-04-03	4	17	25	16	Unconscious/Fainting	1
+2024-04-03	4	17	25	16	Unconscious/Fainting	1
+2024-04-03	4	17	76	1	Traffic Stop	0
+2024-04-03	4	17	25	23	Hemorrhage/Lacerations	1
+2024-04-03	4	17	25	23	Hemorrhage/Lacerations	1
+2024-04-03	4	17	76	4	Welfare Check	0
+2024-04-03	4	17	76	1	Traffic Stop	0
+2024-04-03	4	17	76	7	MVA Non Injury	0
+2024-04-03	4	17	76	43	Fire Gas Leak	0
+2024-04-03	4	17	76	1	Traffic Stop	0
+2024-04-03	4	17	25	7	MVA Non Injury	0
+2024-04-03	4	17	25	7	MVA Non Injury	0
+2024-04-03	4	17	76	5	Disturbance/Domestic	0
+2024-04-03	4	18	5	4	Welfare Check	0
+2024-04-03	4	18	76	16	Harassment / Threats Report	0
+2024-04-03	4	18	76	7	MVA Non Injury	0
+2024-04-03	4	18	25	7	MVA Non Injury	0
+2024-04-03	4	18	76	16	Harassment / Threats Report	0
+2024-04-03	4	18	76	16	Harassment / Threats Report	0
+2024-04-03	4	18	76	20	Motorist Assist	0
+2024-04-03	4	18	76	5	Disturbance/Domestic	0
+2024-04-03	4	18	76	7	MVA Non Injury	0
+2024-04-03	4	18	76	6	Alarm	0
+2024-04-03	4	18	9	16	Unconscious/Fainting	1
+2024-04-03	4	18	9	16	Unconscious/Fainting	1
+2024-04-03	4	18	12	28	Assault EMS Needed	1
+2024-04-03	4	18	12	28	Assault EMS Needed	1
+2024-04-03	4	18	12	5	Disturbance/Domestic	1
+2024-04-03	4	18	5	7	MVA With Injuries	1
+2024-04-03	4	18	5	7	MVA With Injuries	1
+2024-04-03	4	18	5	7	MVA With Injuries	1
+2024-04-03	4	18	5	7	MVA With Injuries	1
+2024-04-03	4	18	76	7	MVA Non Injury	0
+2024-04-03	4	18	76	36	Runaway or Lost Child	0
+2024-04-03	4	18	9	14	Trespassing	0
+2024-04-03	4	19	25	16	Falls	1
+2024-04-03	4	19	25	16	Falls	1
+2024-04-03	4	19	25	23	Hemorrhage/Lacerations	1
+2024-04-03	4	19	25	7	Sick Person	1
+2024-04-03	4	19	76	4	Welfare Check	0
+2024-04-03	4	19	76	1	Traffic Stop	0
+2024-04-03	4	19	2	2	Transfer/Interfacility	1
+2024-04-03	4	19	25	43	Fire Residential	1
+2024-04-03	4	19	25	43	Fire Residential	1
+2024-04-03	4	19	25	14	Trespassing	0
+2024-04-03	4	19	76	4	Welfare Check	0
+2024-04-03	4	19	25	16	Unconscious/Fainting	1
+2024-04-03	4	19	25	16	Unconscious/Fainting	1
+2024-04-03	4	19	76	43	Fire Gas Leak	0
+2024-04-03	4	19	25	13	Breathing Problems	1
+2024-04-03	4	19	25	13	Breathing Problems	1
+2024-04-03	4	19	12	7	MVA With Injuries	1
+2024-04-03	4	19	12	7	MVA With Injuries	1
+2024-04-03	4	19	12	4	Welfare Check	1
+2024-04-03	4	20	4	2	Transfer/Interfacility	1
+2024-04-03	4	20	76	3	Contact a Subject	0
+2024-04-03	4	20	76	28	Hit and Run	0
+2024-04-03	4	20	25	36	Tobacco Violation	0
+2024-04-03	4	20	12	4	Welfare Check	0
+2024-04-03	4	20	5	23	Civil Standby	0
+2024-04-03	4	20	2	2	Transfer/Interfacility	1
+2024-04-03	4	20	2	2	Transfer/Interfacility	1
+2024-04-03	4	20	76	10	Suspicious	0
+2024-04-03	4	20	76	36	Tobacco Violation	0
+2024-04-03	4	20	76	1	Traffic Stop	0
+2024-04-03	4	20	25	11	Larceny	0
+2024-04-03	4	20	9	3	Contact a Subject	0
+2024-04-03	4	20	76	4	Welfare Check	0
+2024-04-03	4	20	76	4	Welfare Check	0
+2024-04-03	4	20	5	2	Transfer/Interfacility	1
+2024-04-03	4	20	4	2	Transfer/Interfacility	1
+2024-04-03	4	20	76	6	Alarm	0
+2024-04-03	4	20	76	12	Check Area	0
+2024-04-03	4	20	25	11	Larceny	0
+2024-04-03	4	21	76	4	Welfare Check	0
+2024-04-03	4	21	9	20	Convulsion/Seizure	1
+2024-04-03	4	21	9	20	Convulsion/Seizure	1
+2024-04-03	4	21	1	2	Transfer/Interfacility	1
+2024-04-03	4	21	76	36	Tobacco Violation	0
+2024-04-03	4	21	76	10	Suspicious	0
+2024-04-03	4	21	25	14	Public Assist	0
+2024-04-03	4	21	25	55	Animal Injured	0
+2024-04-03	4	21	76	12	Check Area	0
+2024-04-03	4	21	76	10	Suspicious	0
+2024-04-03	4	21	76	12	Check Area	0
+2024-04-03	4	21	1	2	Transfer/Interfacility	1
+2024-04-03	4	21	76	12	Check Area	0
+2024-04-03	4	21	76	6	Alarm	0
+2024-04-03	4	21	76	1	Traffic Stop	0
+2024-04-03	4	21	76	4	Welfare Check	0
+2024-04-03	4	21	76	5	Disturbance/Domestic	0
+2024-04-03	4	21	5	3	Contact a Subject	0
+2024-04-03	4	21	25	28	Medical Call Pd Requested	1
+2024-04-03	4	21	25	28	Medical Call Pd Requested	1
+2024-04-03	4	21	9	28	Assault EMS Needed	1
+2024-04-03	4	21	9	28	Assault EMS Needed	1
+2024-04-03	4	21	9	5	Disturbance/Domestic	1
+2024-04-03	4	22	12	3	Contact a Subject	0
+2024-04-03	4	22	12	36	Runaway or Lost Child	0
+2024-04-03	4	22	5	4	Welfare Check	0
+2024-04-03	4	22	1	2	Transfer/Interfacility	1
+2024-04-03	4	22	76	1	Traffic Stop	0
+2024-04-03	4	22	76	5	Disturbance/Domestic	0
+2024-04-03	4	22	76	1	Traffic Stop	0
+2024-04-03	4	22	76	6	Alarm	0
+2024-04-03	4	22	76	1	Traffic Stop	0
+2024-04-03	4	22	1	2	Transfer/Interfacility	1
+2024-04-03	4	22	5	23	Civil Standby	0
+2024-04-03	4	22	25	13	Breathing Problems	1
+2024-04-03	4	22	25	13	Breathing Problems	1
+2024-04-03	4	22	25	43	911 Call Nature Unknown	0
+2024-04-03	4	22	76	55	Animal Vicious	0
+2024-04-03	4	22	76	28	Hit and Run	0
+2024-04-03	4	22	25	20	Overdose/Poisoning	1
+2024-04-03	4	22	25	20	Overdose/Poisoning	1
+2024-04-03	4	22	76	1	Traffic Stop	0
+2024-04-03	4	22	25	23	Noise Complaint	0
+2024-04-03	4	22	25	23	Noise Complaint	0
+2024-04-03	4	22	5	16	Falls	1
+2024-04-03	4	22	5	16	Falls	1
+2024-04-03	4	22	5	16	Follow Up	1
+2024-04-03	4	23	76	1	Traffic Stop	0
+2024-04-03	4	23	12	28	Alarm Holdup/Panic	0
+2024-04-03	4	23	25	16	Follow Up	0
+2024-04-03	4	23	76	14	Public Assist	0
+2024-04-03	4	23	76	6	Alarm	0
+2024-04-03	4	23	25	5	Disturbance/Domestic	0
+2024-04-03	4	23	76	1	Traffic Stop	0
+2024-04-03	4	23	76	23	Noise Complaint	0
+2024-04-03	4	23	25	28	Chest Pain	1
+2024-04-03	4	23	25	28	Chest Pain	1
+2024-04-03	4	23	76	1	Traffic Stop	0
+2024-04-03	4	23	1	2	Transfer/Interfacility	1
+2024-04-03	4	23	76	1	Traffic Stop	0
+2024-04-03	4	23	76	1	Traffic Stop	0
+2024-04-03	4	23	76	10	Suspicious	0
+2024-04-03	4	23	76	1	Traffic Stop	0
+2024-04-03	4	23	76	3	Contact a Subject	0
+2024-04-03	4	23	76	43	COP Problem Solving	0
+2024-04-03	4	23	76	1	Traffic Stop	0
+2024-04-03	4	23	76	43	Fire Alarm	0
+2024-04-03	4	23	76	1	Traffic Stop	0
+2024-04-03	4	23	76	1	Traffic Stop	0

@@ -1,6 +1,13 @@
 from datetime import datetime
 import pandas as pd
 
+
+# Get the date of the incident in the format YYYY-MM-DD, as this is the format the weather API requires
+def get_date(incident_time):
+    date = incident_time.split()[0]
+    return datetime.strptime(date, '%m/%d/%Y').strftime('%Y-%m-%d')
+
+
 # Day of week is a numeric value in the range 1-7. Where 1 corresponds to Sunday and 7 corresonds of Saturday.
 def get_day(day):
     day_num = datetime.strptime(day, '%m/%d/%Y').weekday() # Monday is 0 and Sunday is 6

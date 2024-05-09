@@ -1,7 +1,7 @@
 import pytest
 import io
 import urllib.request
-from src.extract_utils import fetchincidents, extractincidents
+from extraction import fetchincidents, extractincidents
 
 # Test urls
 VALID_TEST_URL = "https://www.normanok.gov/sites/default/files/documents/2024-02/2024-02-01_daily_incident_summary.pdf"

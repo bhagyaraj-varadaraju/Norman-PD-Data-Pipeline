@@ -1,5 +1,5 @@
 import sqlite3, os
-from src.extract_utils import createdb, populatedb
+from extraction import createdb, populatedb
 
 
 # Test the connection to the database

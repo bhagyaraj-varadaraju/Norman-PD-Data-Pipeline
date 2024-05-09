@@ -1,6 +1,6 @@
 import os, io
-from src.augment_data import augment_data
-from src.extract_utils import createdb, populatedb, extractincidents
+from utils import augment_data
+from extraction import createdb, populatedb, extractincidents
 
 def test_augment_data():
     # Delete the database file

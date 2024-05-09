@@ -2,6 +2,7 @@ from geographiclib.geodesic import Geodesic
 from geopy.geocoders import Nominatim
 import re
 
+
 # The side of town is one of eight items {N, S, E, W, NW, NE, SW, SE}. Side of town is determined by approximate orientation to the center of town (35.220833, -97.443611).
 def get_side_of_town(incident_location):
     # Get the latitude and longitude of the incident location

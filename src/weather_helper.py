@@ -1,5 +1,5 @@
 import requests
-from src import location_helper, augment_utils
+from src import location_helper, utils
 from datetime import datetime
 
 
@@ -11,7 +11,7 @@ def get_weather_code(incident_time, incident_location):
         return ''
 
     # Get the date of the incident
-    date = get_date(incident_time)
+    date = utils.get_date(incident_time)
 
     # Get the weather code at the time and location of the incident
     data = get_weather_data(incident_lat, incident_long, date)
@@ -19,14 +19,8 @@ def get_weather_code(incident_time, incident_location):
         return None
 
     # Return the weather code value by parsing the data
-    weather_code = data.get('hourly').get('weather_code')[augment_utils.get_time(incident_time.split()[1])]
+    weather_code = data.get('hourly').get('weather_code')[utils.get_time(incident_time.split()[1])]
     return weather_code if weather_code is not None else ''
-
-
-# Get the date of the incident in the format YYYY-MM-DD, as this is the format the weather API requires
-def get_date(incident_time):
-    date = incident_time.split()[0]
-    return datetime.strptime(date, '%m/%d/%Y').strftime('%Y-%m-%d')
 
 
 # Get the weather response data from the weather API

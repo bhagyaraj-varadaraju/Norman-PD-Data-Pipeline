@@ -1,7 +1,13 @@
+import streamlit as st
+import pandas as pd
+import seaborn as sns
 import argparse
 import os, sys
-from src import extract_utils, augment_data
+from src import extraction, augmentation
 
+
+st.set_page_config(layout="centered")
+st.title('Incident Summaries in Norman, OK')
 
 def main(urls_file):
     #Read the file and get the url from each line
@@ -21,34 +27,40 @@ def main(urls_file):
             url = url.strip()
 
             # Download data
-            incident_data = extract_utils.fetchincidents(url)
+            incident_data = extraction.fetchincidents(url)
 
             # Extract data
-            incidents = extract_utils.extractincidents(incident_data)
+            incidents = extraction.extractincidents(incident_data)
 
             # Create new database
-            db = extract_utils.createdb("normanpd_raw")
+            db = extraction.createdb("normanpd_raw")
 
             # Insert the extracted raw data into the database
-            extract_utils.populatedb(db, incidents)
+            extraction.populatedb(db, incidents)
 
     # Augment the data
-    augmented_data = augment_data.augment_data(db)
+    augmented_data = augmentation.augment_data(db)
 
     # Redirect to csv file
     with open("resources/normanpd_augmented.csv", "w") as f:
-        header = ["Day of the Week", "Time of Day", "Weather", "Location Rank", "Side of Town", "Incident Rank", "Nature", "EMSSTAT"]
+        # header = ["Date (YYYY-MM-DD)", "Day of the Week", "Time of Day", "Weather", "Location Rank", "Side of Town", "Incident Rank", "Nature", "EMSSTAT"]
+        header = ["Date (YYYY-MM-DD)", "Day of the Week", "Time of Day", "Location Rank", "Incident Rank", "Nature", "EMSSTAT"]
+
         f.write("\t".join(header) + "\n")
         # Print the header to stdout
-        print("\t".join(header), file=sys.stdout)
+        # print("\t".join(header), file=sys.stdout)
 
         for row in augmented_data:
             f.write("\t".join(map(str, row)) + "\n")
             # Print each row to stdout
-            print("\t".join(map(str, row)), file=sys.stdout)
+            # print("\t".join(map(str, row)), file=sys.stdout)
 
     # Close the database connection
     db.close()
+
+    # Plot the augmented data
+    augmented_df = pd.read_csv("resources/normanpd_augmented.csv", sep="\t")
+    st.write(augmented_df)
 
 
 if __name__ == '__main__':
