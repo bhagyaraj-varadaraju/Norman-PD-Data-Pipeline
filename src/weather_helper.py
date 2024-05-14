@@ -1,5 +1,5 @@
 import requests
-from src import location_helper, utils
+import location_helper, utils
 from datetime import datetime
 
 

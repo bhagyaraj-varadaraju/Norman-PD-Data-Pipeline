@@ -1,5 +1,5 @@
-from src import weather_helper, location_helper
-from src import utils
+import weather_helper, location_helper
+import utils
 
 
 # Read and augment the data from the database
@@ -34,20 +34,26 @@ def augment_data(db):
         # Get the weather at the time and location of the incident
         # output_row.append(weather_helper.get_weather_code(incident[0], incident[2]))
 
+        # Get the location of the incident
+        output_row.append(incident[2])
+
+        # Get the latitude and longitude of the incident location
+        # output_row.append(location_helper.get_lat_long(incident[2]))
+
         # Get the incident_location rank
         output_row.append(location_ranks[incident[2]])
 
         # Get the side of town using the incident_location
         # output_row.append(location_helper.get_side_of_town(incident[2]))
 
-        # Get the incident_nature rank
-        output_row.append(incident_ranks[incident[3]])
-
         # Get the nature of the incident
         output_row.append(incident[3])
 
+        # Get the incident_nature rank
+        output_row.append(incident_ranks[incident[3]])
+
         # Get the EMSSTAT value
-        output_row.append(emsstat_values[row_num])
+        # output_row.append(emsstat_values[row_num])
 
         # Append the augmented data row to the list
         augmented_data.append(output_row)
