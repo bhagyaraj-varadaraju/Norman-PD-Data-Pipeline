@@ -1,5 +1,4 @@
-import weather_helper, location_helper
-import utils
+from utils import augmentation_utils, weather_helper, location_helper
 
 
 # Read and augment the data from the database
@@ -10,26 +9,26 @@ def augment_data(db):
     incidents = db.execute("SELECT * FROM incidents").fetchall()
 
     # Create and populate the location_ranks dictionary
-    location_ranks = utils.get_location_ranks(db)
+    location_ranks = augmentation_utils.get_location_ranks(db)
 
     # Create and populate the incident_ranks dictionary
-    incident_ranks = utils.get_incident_ranks(db)
+    incident_ranks = augmentation_utils.get_incident_ranks(db)
 
     # Create and populate the emsstat dictionary
-    emsstat_values = utils.get_emsstat(incidents)
+    emsstat_values = augmentation_utils.get_emsstat(incidents)
 
     # Augment the data
     for row_num, incident in enumerate(incidents):
         output_row = []
 
         # Get the date of the incident
-        output_row.append(utils.get_date(incident[0]))
+        output_row.append(augmentation_utils.get_date(incident[0]))
 
         # Get the day of the week the incident occurred
-        output_row.append(utils.get_day(incident[0].split()[0]))
+        output_row.append(augmentation_utils.get_day(incident[0].split()[0]))
 
         # Get the time of day the incident occurred
-        output_row.append(utils.get_time(incident[0].split()[1]))
+        output_row.append(augmentation_utils.get_time(incident[0].split()[1]))
 
         # Get the weather at the time and location of the incident
         # output_row.append(weather_helper.get_weather_code(incident[0], incident[2]))

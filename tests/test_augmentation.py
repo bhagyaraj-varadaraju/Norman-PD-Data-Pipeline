@@ -1,5 +1,5 @@
 import os, io
-from utils import augment_data
+from augmentation_utils import augment_data
 from extraction import createdb, populatedb, extractincidents
 
 def test_augment_data():
