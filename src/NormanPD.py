@@ -1,42 +1,53 @@
 import streamlit as st
 import pandas as pd
 import argparse
-import os, sys
+import os, datetime, sys
 import extraction, augmentation
 
+
+# Set the page configuration
 st.set_page_config(layout="wide", page_title="Norman Police Department App", page_icon="🚔")
 st.title('Incident Summaries in Norman, OK')
-st.sidebar.success("Select a page above to visualise incident summary data")
 
-# Main function to extract, augment, and plot the incident data
-def main(urls_file):
-    #Read the file and get the url from each line
-    with open(urls_file, 'r') as f:
-        urls = f.readlines()
-        # Delete the old db file if it exists
-        try:
-            os.remove("../resources/normanpd_raw.db")
-            os.remove("../resources/normanpd_augmented.csv")
-        except FileNotFoundError:
-            pass
+# Assign a default value to the date picker state
+today = datetime.datetime.now()
+min_date = datetime.datetime(today.year, 12, 1) if (today.month == 1) else datetime.datetime(today.year, today.month - 1, 1)
+max_date = datetime.datetime(today.year, today.month, today.day) if (today.day < 3) else datetime.datetime(today.year, today.month, today.day - 2)
 
-        db = None
-        # Iterate through each url and extract the raw incident data
-        for url in urls:
-            # Remove the newline character
-            url = url.strip()
+if "incident_date_range" not in st.session_state:
+    st.session_state.incident_date_range = [min_date, max_date]
 
-            # Download data
-            incident_data = extraction.fetchincidents(url)
 
-            # Extract data
-            incidents = extraction.extractincidents(incident_data)
+# Download and augment the incident data for the selected dates
+@st.cache_data
+def download_pdfs(all_dates):
+    # Delete the old augmented file if it exists
+    try:
+        os.remove("../resources/normanpd_raw.db")
+        os.remove("../resources/normanpd_augmented.csv")
+    except FileNotFoundError:
+        pass
 
-            # Create new database
-            db = extraction.createdb("normanpd_raw")
+    # Initialize the database connection
+    db = None
 
-            # Insert the extracted raw data into the database
-            extraction.populatedb(db, incidents)
+    # Iterate through each url and extract the raw incident data
+    for date in all_dates:
+        # Create the url for each selected date
+        ## Example URL: https://www.normanok.gov/sites/default/files/documents/YYYY-MM/YYYY-MM-DD_daily_incident_summary.pdf
+        url = "https://www.normanok.gov/sites/default/files/documents/" + date.strftime("%Y-%m") + "/" + date.strftime("%Y-%m-%d") + "_daily_incident_summary.pdf"
+
+        # Download data from the url
+        incident_data = extraction.fetchincidents(url)
+
+        # Extract data
+        incidents = extraction.extractincidents(incident_data)
+
+        # Create new database
+        db = extraction.createdb("normanpd_raw")
+
+        # Insert the extracted raw data into the database
+        extraction.populatedb(db, incidents)
 
     # Augment the data
     augmented_data = augmentation.augment_data(db)
@@ -62,12 +73,32 @@ def main(urls_file):
     augmented_df = pd.read_csv("../resources/normanpd_augmented.csv", sep="\t")
     st.write(augmented_df)
 
+    return augmented_df
+
+def main():
+    # Create a form with a date picker in the sidebar
+    with st.form(key ='Form1'):
+        st.success("Select a date range below to visualise the incident summary data")
+        selected_date_range = st.date_input("Select Date Range", 
+                                            value=(st.session_state.incident_date_range[0], st.session_state.incident_date_range[1]), 
+                                            min_value=min_date, max_value=max_date, format="MM/DD/YYYY")
+
+        submit_button = st.form_submit_button("Download / View data for selected dates")
+
+    if submit_button:
+        # Save the selected range into a state variable
+        if selected_date_range:
+            st.session_state.incident_date_range = selected_date_range
+            st.write("Selected date range: ", st.session_state.incident_date_range[0], " - ", st.session_state.incident_date_range[1])
+
+        # Get all the dates in the selected range
+        all_dates = pd.date_range(start=st.session_state.incident_date_range[0], end=st.session_state.incident_date_range[1], freq='D').to_list()
+
+        # Download the incident data for each selected date
+        download_pdfs(all_dates)
+
+
 
 if __name__ == '__main__':
-    # Parse command line arguments
-    parser = argparse.ArgumentParser()
-    parser.add_argument("--urls", type=str, required=True, help="Incident summary urls file.")
-
-    args = parser.parse_args()
-    if args.urls:
-        main(args.urls)
+    # Call the main function
+    main()
