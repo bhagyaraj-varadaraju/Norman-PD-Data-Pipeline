@@ -2,25 +2,34 @@ import streamlit as st
 import pandas as pd
 
 
-st.set_page_config(layout="wide", page_title="Plotting Demo", page_icon="📈")
-st.markdown("# Plotting Demo")
-st.sidebar.header("Plotting Demo")
-st.write(
-    """This demo illustrates a combination of plotting and animation with
-Streamlit. We're generating a bunch of random numbers in a loop for around
-5 seconds. Enjoy!"""
-)
+st.set_page_config(layout="wide", page_title="Plotting Demo", page_icon="🚔")
+st.markdown("# Bar Chart")
+st.write("""This bar graph visualises the top 10 incident natures by the frequency of their occurence during the dates you selected. You can select additional incident natures to compare them against the top 10 incident types.""")
 
 def plot_data():
     # Read the augmented data from the csv file
-    augmented_df = pd.read_csv("../resources/normanpd_augmented.csv", sep="\t")
+    try:
+        augmented_df = pd.read_csv("../resources/normanpd_augmented.csv", sep="\t")
+    except FileNotFoundError:
+        st.error("Please download the data first.")
+        return
 
-    # Plot the incident frequency by the nature of the incident
+    # Get incident natures sorted by the frequency of occurrence
     incident_freq_by_nature = augmented_df['Incident Nature'].value_counts()
-    ax = incident_freq_by_nature.plot(kind='bar', color='skyblue')
+
+    # Use a multiselect widget to select the incident natures
+    selected_natures = st.multiselect('Select additional Incident Natures:', incident_freq_by_nature.index.tolist(), incident_freq_by_nature.index.tolist()[:15])
+
+    if not selected_natures:
+        st.error("Please select at least one incident nature.")
+        return
+
+    # Plot the selected incident natures along with the default incident natures
+    selected_incident_freq_by_nature = incident_freq_by_nature[selected_natures]
+    ax = selected_incident_freq_by_nature.plot(kind='bar', color='skyblue')
     ax.set_title('Incident Frequency by Nature')
     ax.set_xlabel('Nature of the Incident')
     ax.set_ylabel('Frequency')
-    st.bar_chart(incident_freq_by_nature)
+    st.bar_chart(selected_incident_freq_by_nature, height=600)
 
 plot_data()

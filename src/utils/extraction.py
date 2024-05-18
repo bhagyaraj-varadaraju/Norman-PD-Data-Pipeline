@@ -84,7 +84,7 @@ def extractincidents(data):
 def createdb(db_name):
     try:
         # Connect to the database
-        con = sqlite3.connect(f'../../resources/{db_name}.db')
+        con = sqlite3.connect(f'../resources/{db_name}.db')
         cur = con.cursor()
 
         # Create the incidents table
