@@ -23,8 +23,8 @@ if "incident_date_range" not in st.session_state:
 def download_data(all_dates):
     # Delete the old db file if it exists
     try:
-        os.remove("../resources/normanpd_raw.db")
-        os.remove("../resources/normanpd_augmented.csv")
+        os.remove("./resources/normanpd_raw.db")
+        os.remove("./resources/normanpd_augmented.csv")
     except FileNotFoundError:
         pass
 
@@ -53,7 +53,7 @@ def download_data(all_dates):
     augmented_data = augmentation.augment_data(db)
 
     # Redirect to csv file
-    with open("../resources/normanpd_augmented.csv", "w") as f:
+    with open("./resources/normanpd_augmented.csv", "w") as f:
         # header = ["Day of the Week", "Time of Day", "Weather", "Location Rank", "Side of Town", "Incident Rank", "Nature", "EMSSTAT"]
         header = ["Date (YYYY-MM-DD)", "Day of the Week", "Time of Day", "Location", "Location Rank", "Incident Nature", "Incident Rank"]
         f.write("\t".join(header) + "\n")
@@ -96,7 +96,7 @@ def main():
         download_data(all_dates)
 
         # View the augmented data
-        view_data(all_dates, "../resources/normanpd_augmented.csv")
+        view_data(all_dates, "./resources/normanpd_augmented.csv")
 
 
 if __name__ == '__main__':

@@ -9,7 +9,7 @@ st.write("""This bar graph illustrates the incident frequency by the location of
 def plot_data():
     # Read the augmented data from the csv file
     try:
-        augmented_df = pd.read_csv("../resources/normanpd_augmented.csv", sep="\t")
+        augmented_df = pd.read_csv("./resources/normanpd_augmented.csv", sep="\t")
     except FileNotFoundError:
         st.error("Please download the data first.")
         return

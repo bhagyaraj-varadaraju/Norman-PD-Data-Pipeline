@@ -1,11 +1,11 @@
 import os, io
-from augmentation_utils import augment_data
-from extraction import createdb, populatedb, extractincidents
+from utils.augmentation_helper import augment_data
+from src.utils.extraction import createdb, populatedb, extractincidents
 
 def test_augment_data():
     # Delete the database file
     try:
-        os.remove('resources/normanpd_raw_test.db')
+        os.remove('../src/resources/normanpd_raw_test.db')
     except FileNotFoundError:
         pass
 

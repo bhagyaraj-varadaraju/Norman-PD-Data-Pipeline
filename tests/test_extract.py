@@ -1,7 +1,7 @@
 import pytest
 import io
 import urllib.request
-from extraction import fetchincidents, extractincidents
+from src.utils.extraction import fetchincidents, extractincidents
 
 # Test urls
 VALID_TEST_URL = "https://www.normanok.gov/sites/default/files/documents/2024-02/2024-02-01_daily_incident_summary.pdf"
@@ -34,7 +34,7 @@ def test_fetchincidents_invalid_url():
 # Test the extractincidents(data) function with the sample PDF data
 def test_extractincidents():
     # Get the sample pdf data
-    with open ("docs/2024-01-25_daily_incident_summary.pdf", "rb") as file:
+    with open ("../docs/2024-01-25_daily_incident_summary.pdf", "rb") as file:
         sample_pdf_data = file.read()
 
     # Call the extractincidents function

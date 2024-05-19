@@ -1,5 +1,5 @@
 import requests
-from utils import location_helper, augmentation_utils
+from utils import augmentation_helper, location_helper
 
 
 # Determine the weather at the time and location of the incident
@@ -10,7 +10,7 @@ def get_weather_code(incident_time, incident_location):
         return ''
 
     # Get the date of the incident
-    date = augmentation_utils.get_date(incident_time)
+    date = augmentation_helper.get_date(incident_time)
 
     # Get the weather code at the time and location of the incident
     data = get_weather_data(incident_lat, incident_long, date)
@@ -18,7 +18,7 @@ def get_weather_code(incident_time, incident_location):
         return None
 
     # Return the weather code value by parsing the data
-    weather_code = data.get('hourly').get('weather_code')[augmentation_utils.get_time(incident_time.split()[1])]
+    weather_code = data.get('hourly').get('weather_code')[augmentation_helper.get_time(incident_time.split()[1])]
     return weather_code if weather_code is not None else ''
 
 

@@ -1,12 +1,12 @@
 import sqlite3, os
-from extraction import createdb, populatedb
+from src.utils.extraction import createdb, populatedb
 
 
 # Test the connection to the database
 def test_createdb_connection():
     # Delete the database file
     try:
-        os.remove('resources/normanpd_raw_test.db')
+        os.remove('../src/resources/normanpd_raw_test.db')
     except FileNotFoundError:
         pass
 

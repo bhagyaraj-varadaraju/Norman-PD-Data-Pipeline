@@ -10,7 +10,7 @@ st.write("""This plot illustrates the incident count by hour for the selected da
 def plot_data():
     # Read the augmented data from the csv file
     try:
-        augmented_df = pd.read_csv("../resources/normanpd_augmented.csv", sep="\t")
+        augmented_df = pd.read_csv("./resources/normanpd_augmented.csv", sep="\t")
     except FileNotFoundError:
         st.error("Please download the data first.")
         return

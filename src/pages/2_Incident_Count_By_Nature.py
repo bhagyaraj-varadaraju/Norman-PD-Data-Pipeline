@@ -9,7 +9,7 @@ st.write("""This bar graph visualises the top 10 incident natures by the frequen
 def plot_data():
     # Read the augmented data from the csv file
     try:
-        augmented_df = pd.read_csv("../resources/normanpd_augmented.csv", sep="\t")
+        augmented_df = pd.read_csv("./resources/normanpd_augmented.csv", sep="\t")
     except FileNotFoundError:
         st.error("Please download the data first.")
         return
