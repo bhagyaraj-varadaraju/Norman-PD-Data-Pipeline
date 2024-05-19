@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import argparse
 import os, datetime, sys
-import extraction, augmentation
+from utils import extraction, augmentation
 
 
 # Set the page configuration
@@ -11,8 +11,8 @@ st.title('Incident Summaries in Norman, OK')
 
 # Assign a default value to the date picker state
 today = datetime.datetime.now()
-min_date = datetime.datetime(today.year, 12, 1) if (today.month == 1) else datetime.datetime(today.year, today.month - 1, 1)
-max_date = datetime.datetime(today.year, today.month, today.day) if (today.day < 3) else datetime.datetime(today.year, today.month, today.day - 2)
+min_date = datetime.date(today.year, 12, 1) if (today.month == 1) else datetime.date(today.year, today.month - 1, 1)
+max_date = datetime.date(today.year, today.month, today.day) if (today.day < 3) else datetime.date(today.year, today.month, today.day - 2)
 
 if "incident_date_range" not in st.session_state:
     st.session_state.incident_date_range = [min_date, max_date]
@@ -20,8 +20,8 @@ if "incident_date_range" not in st.session_state:
 
 # Download and augment the incident data for the selected dates
 @st.cache_data
-def download_pdfs(all_dates):
-    # Delete the old augmented file if it exists
+def download_data(all_dates):
+    # Delete the old db file if it exists
     try:
         os.remove("../resources/normanpd_raw.db")
         os.remove("../resources/normanpd_augmented.csv")
@@ -56,47 +56,47 @@ def download_pdfs(all_dates):
     with open("../resources/normanpd_augmented.csv", "w") as f:
         # header = ["Day of the Week", "Time of Day", "Weather", "Location Rank", "Side of Town", "Incident Rank", "Nature", "EMSSTAT"]
         header = ["Date (YYYY-MM-DD)", "Day of the Week", "Time of Day", "Location", "Location Rank", "Incident Nature", "Incident Rank"]
-
         f.write("\t".join(header) + "\n")
-        # Print the header to stdout
-        # print("\t".join(header), file=sys.stdout)
 
         for row in augmented_data:
             f.write("\t".join(map(str, row)) + "\n")
-            # Print each row to stdout
-            # print("\t".join(map(str, row)), file=sys.stdout)
 
     # Close the database connection
     db.close()
 
-    # Read the augmented data from the csv file
-    augmented_df = pd.read_csv("../resources/normanpd_augmented.csv", sep="\t")
-    st.write(augmented_df)
+@st.cache_data
+def view_data(all_dates, csv_file):
+    if os.path.exists(csv_file):
+        # Read the augmented data from the csv file
+        augmented_df = pd.read_csv(csv_file, sep="\t")
 
-    return augmented_df
+        # Display the augmented data
+        st.write(augmented_df)
 
 def main():
     # Create a form with a date picker in the sidebar
     with st.form(key ='Form1'):
-        st.success("Select a date range below to visualise the incident summary data")
-        selected_date_range = st.date_input("Select Date Range", 
+        st.success(f"Select a date range between {st.session_state.incident_date_range[0]} and {st.session_state.incident_date_range[1]} to download and view the incident data")
+        selected_date_range = st.date_input(("Select a date range:"), 
                                             value=(st.session_state.incident_date_range[0], st.session_state.incident_date_range[1]), 
                                             min_value=min_date, max_value=max_date, format="MM/DD/YYYY")
 
-        submit_button = st.form_submit_button("Download / View data for selected dates")
+        submit_button = st.form_submit_button("Download/View data for selected dates")
 
+    all_dates = []
     if submit_button:
         # Save the selected range into a state variable
-        if selected_date_range:
-            st.session_state.incident_date_range = selected_date_range
-            st.write("Selected date range: ", st.session_state.incident_date_range[0], " - ", st.session_state.incident_date_range[1])
+        st.session_state.incident_date_range = selected_date_range
+        st.write("You Selected: ", st.session_state.incident_date_range[0], " - ", st.session_state.incident_date_range[1])
 
         # Get all the dates in the selected range
         all_dates = pd.date_range(start=st.session_state.incident_date_range[0], end=st.session_state.incident_date_range[1], freq='D').to_list()
 
         # Download the incident data for each selected date
-        download_pdfs(all_dates)
+        download_data(all_dates)
 
+        # View the augmented data
+        view_data(all_dates, "../resources/normanpd_augmented.csv")
 
 
 if __name__ == '__main__':
