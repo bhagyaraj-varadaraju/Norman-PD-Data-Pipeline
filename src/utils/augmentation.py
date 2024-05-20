@@ -1,5 +1,4 @@
 from utils import augmentation_helper, weather_helper, location_helper
-from sqlalchemy import text
 import pandas as pd
 
 

@@ -1,4 +1,4 @@
-# Norman Police Department Incident Management System
+# Norman Police Department Incident Visualization
 
 Name: Bhagya Raj Varadaraju\
 Email: bhagyaraj.varadaraju@gmail.com

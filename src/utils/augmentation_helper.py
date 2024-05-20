@@ -1,6 +1,4 @@
 from datetime import datetime
-from sqlalchemy import text
-import pandas as pd
 
 
 # Get the date of the incident in the format YYYY-MM-DD, as this is the format the weather API requires
