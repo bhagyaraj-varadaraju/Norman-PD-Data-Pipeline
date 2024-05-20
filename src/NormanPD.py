@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
-import argparse
-import os, datetime, sys
+import datetime
+
 from utils import extraction, augmentation
 
 
@@ -22,23 +22,29 @@ if "augmented_data" not in st.session_state:
     st.session_state.augmented_data = []
 
 
-# Download and augment the incident data for the selected dates
+# Download and extract the incident data for the a single date
 @st.cache_data
-def download_data(all_dates):
+def extract_pdf(date):
+    # Create the url for each selected date
+    ## Example URL: https://www.normanok.gov/sites/default/files/documents/YYYY-MM/YYYY-MM-DD_daily_incident_summary.pdf
+    url = "https://www.normanok.gov/sites/default/files/documents/" + date.strftime("%Y-%m") + "/" + date.strftime("%Y-%m-%d") + "_daily_incident_summary.pdf"
+
+    # Download the incident summary PDF from the url
+    incident_data = extraction.fetchincidents(url)
+
+    # Extract and return the incident data present in PDF
+    return extraction.extractincidents(incident_data)
+
+
+# Augment the incident data for the selected dates
+@st.cache_data
+def transform_data(all_dates):
     # Initialize the list to store the extracted incidents
     incidents = []
 
     # Iterate through each url and extract the raw incident data
     for date in all_dates:
-        # Create the url for each selected date
-        ## Example URL: https://www.normanok.gov/sites/default/files/documents/YYYY-MM/YYYY-MM-DD_daily_incident_summary.pdf
-        url = "https://www.normanok.gov/sites/default/files/documents/" + date.strftime("%Y-%m") + "/" + date.strftime("%Y-%m-%d") + "_daily_incident_summary.pdf"
-
-        # Download data from the url
-        incident_data = extraction.fetchincidents(url)
-
-        # Extract data
-        incidents.extend(extraction.extractincidents(incident_data))
+        incidents.extend(extract_pdf(date))
 
     # Augment the data
     augmented_data = augmentation.augment_data(incidents)
@@ -77,7 +83,7 @@ def main():
         all_dates = pd.date_range(start=st.session_state.incident_date_range[0], end=st.session_state.incident_date_range[1], freq='D').to_list()
 
         # Download the incident data for each selected date
-        resultant_data = download_data(all_dates)
+        resultant_data = transform_data(all_dates)
         if resultant_data:
             st.session_state.augmented_data = resultant_data
 

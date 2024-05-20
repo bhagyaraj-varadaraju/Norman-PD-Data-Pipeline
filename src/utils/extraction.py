@@ -25,7 +25,7 @@ def fetchincidents(url):
 
     # Handle any other errors that occur
     except Exception as e:
-        print(f"An unexpected error occurred: {e}")
+        print(f"An unexpected error occurred during pdf download: {e}")
         raise
 
 
@@ -79,5 +79,5 @@ def extractincidents(data):
 
     # Handle any errors that occur
     except Exception as e:
-        print(f"An unexpected error occurred: {e}")
+        print(f"An unexpected error occurred during incident extraction: {e}")
         return []
