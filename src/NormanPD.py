@@ -12,7 +12,7 @@ st.title('Incident Summaries in Norman, OK')
 # Assign a default value to the date picker state
 today = datetime.datetime.now()
 min_date = datetime.date(today.year, 12, 1) if (today.month == 1) else datetime.date(today.year, today.month - 1, 1)
-max_date = datetime.date(today.year, today.month, today.day) if (today.day < 3) else datetime.date(today.year, today.month, today.day - 2)
+max_date = datetime.date(today.year, today.month, today.day)
 
 # Assign default values to the session state variables
 if "incident_date_range" not in st.session_state:
@@ -30,10 +30,12 @@ def extract_pdf(date):
     url = "https://www.normanok.gov/sites/default/files/documents/" + date.strftime("%Y-%m") + "/" + date.strftime("%Y-%m-%d") + "_daily_incident_summary.pdf"
 
     # Download the incident summary PDF from the url
-    incident_data = extraction.fetchincidents(url)
+    incident_data_bytes = extraction.fetchincidents(date, url)
+    if not incident_data_bytes:
+        return []
 
     # Extract and return the incident data present in PDF
-    return extraction.extractincidents(incident_data)
+    return extraction.extractincidents(date, incident_data_bytes)
 
 
 # Augment the incident data for the selected dates
@@ -54,18 +56,18 @@ def transform_data(all_dates):
 # Write the augmented data to streamlit app
 def write_data(augmented_data):
     if not augmented_data:
-        st.error("Download the data to view the transformed incident summaries here:")
-        return
-
-    # Create a dataframe to store the augmented data
-    augmented_df = pd.DataFrame(augmented_data, columns=["Date (YYYY-MM-DD)", "Day of the Week", "Time of Day", "Location", "Location Rank", "Incident Nature", "Incident Rank"])
-    st.write(augmented_df)
+        st.info("Download the data to view the transformed incident summaries here:")
+    else:
+        # Create a dataframe to store the augmented data
+        augmented_df = pd.DataFrame(augmented_data, columns=["Date (YYYY-MM-DD)", "Day of the Week", "Time of Day", "Location", "Location Rank", "Incident Nature", "Incident Rank"])
+        st.toast(":green[Data downloaded successfully!]", icon="🎉")
+        st.write(augmented_df)
 
 
 def main():
     # Create a form with a date picker in the sidebar
     with st.form(key ='Form1'):
-        st.success(f"Select a date range between {st.session_state.incident_date_range[0]} and {st.session_state.incident_date_range[1]} to download and view the incident data")
+        st.info(f"Select a date range between {min_date} and {max_date} to download and view the incident data")
         selected_date_range = st.date_input(("Select a date range:"), 
                                             value=(st.session_state.incident_date_range[0], st.session_state.incident_date_range[1]), 
                                             min_value=min_date, max_value=max_date, format="MM/DD/YYYY")
@@ -75,19 +77,20 @@ def main():
     # If the form is submitted, download the data
     resultant_data = []
     if submit_button:
-        # Save the selected range into a state variable
+        # Save the selected range to the session state
         st.session_state.incident_date_range = selected_date_range
-        st.write("You Selected: ", st.session_state.incident_date_range[0], " - ", st.session_state.incident_date_range[1])
 
         # Get all the dates in the selected range
         all_dates = pd.date_range(start=st.session_state.incident_date_range[0], end=st.session_state.incident_date_range[1], freq='D').to_list()
 
         # Download the incident data for each selected date
         resultant_data = transform_data(all_dates)
-        if resultant_data:
-            st.session_state.augmented_data = resultant_data
+
+        # Save the augmented data to the session state
+        st.session_state.augmented_data = resultant_data
 
     # View the augmented data
+    st.write("You Selected: ", st.session_state.incident_date_range[0], " - ", st.session_state.incident_date_range[1])
     write_data(st.session_state.augmented_data)
 
 

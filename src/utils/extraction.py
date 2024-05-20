@@ -3,12 +3,10 @@ import urllib.request
 import pypdf
 import io
 import re
-import sqlite3
-from sqlalchemy import text, insert
 
 
 # Fetch the PDF from the URL
-def fetchincidents(url):
+def fetchincidents(date, url):
     url = (url)
     headers = {}
     headers['User-Agent'] = "Mozilla/5.0 (X11; Linux i686) AppleWebKit/537.17 (KHTML, like Gecko) Chrome/24.0.1312.27 Safari/537.17"                          
@@ -20,17 +18,17 @@ def fetchincidents(url):
 
     # Handle any HTTP errors that occur
     except urllib.error.HTTPError as e:
-        print(f"HTTPError: {e.code} - {e.reason}")
-        raise
+        st.error(f"Excluding {date.date()} from analysis, as the PDF file is not available for that date - {e}")
+        return None
 
     # Handle any other errors that occur
     except Exception as e:
-        print(f"An unexpected error occurred during pdf download: {e}")
+        st.error(f"An unexpected error occurred during pdf download: {e}")
         raise
 
 
 # Extract each incident that includes a incident_time, incident_number, incident_location, nature, and incident_ori
-def extractincidents(data):
+def extractincidents(date, data):
     try:
         # Extract the text in the form of bytes from the PDF
         reader = pypdf.PdfReader(data)
@@ -75,9 +73,11 @@ def extractincidents(data):
 
         # Return the list of incidents by removing the header of the PDF
         incidents = list(incidents[1:])
+        if not incidents:
+            st.warning(f"Excluding {date.date()} from analysis, as the downloaded PDF file did not contain any incident information for that date.")
         return incidents
 
     # Handle any errors that occur
     except Exception as e:
-        print(f"An unexpected error occurred during incident extraction: {e}")
-        return []
+        st.error(f"An unexpected error occurred during incident extraction: {e}")
+        raise

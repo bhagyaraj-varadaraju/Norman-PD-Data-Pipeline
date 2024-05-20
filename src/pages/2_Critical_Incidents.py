@@ -3,15 +3,15 @@ import pandas as pd
 
 
 st.set_page_config(layout="wide", page_title="Plotting Demo", page_icon="🚔")
-st.markdown("# Bar Chart")
-st.write("""This bar graph visualises the top 10 incident natures by the frequency of their occurence during the dates you selected. You can select additional incident natures to compare them against the top 10 incident types.""")
+st.title("Bar graph")
 
 def plot_data():
     # Read the augmented data from the session state
     if st.session_state.augmented_data:
         augmented_df = pd.DataFrame(st.session_state.augmented_data, columns=["Date (YYYY-MM-DD)", "Day of the Week", "Time of Day", "Location", "Location Rank", "Incident Nature", "Incident Rank"])
+        st.info("This plot visualises the top 10 incident natures by the frequency of their occurence during the dates you selected. You can select additional incident natures to compare them against the top 10 incident types.")
     else:
-        st.error("Please download the data to visualize the incident frequency by nature")
+        st.error("Please download the data to visualize the incident frequency by nature for the selected dates.")
         return
 
     # Get incident natures sorted by the frequency of occurrence
