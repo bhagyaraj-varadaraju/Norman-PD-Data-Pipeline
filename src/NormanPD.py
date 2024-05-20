@@ -27,8 +27,7 @@ def download_data(all_dates):
     except FileNotFoundError:
         pass
 
-    # Initialize the database connection
-    conn = extraction.createdb("normanpd_raw")
+    incidents = []
 
     # Iterate through each url and extract the raw incident data
     for date in all_dates:
@@ -40,13 +39,10 @@ def download_data(all_dates):
         incident_data = extraction.fetchincidents(url)
 
         # Extract data
-        incidents = extraction.extractincidents(incident_data)
-
-        # Insert the extracted raw data into the database
-        extraction.populatedb(conn, incidents)
+        incidents.extend(extraction.extractincidents(incident_data))
 
     # Augment the data
-    augmented_data = augmentation.augment_data(conn)
+    augmented_data = augmentation.augment_data(incidents)
 
     # Redirect to csv file
     with open("./resources/normanpd_augmented.csv", "w") as f:

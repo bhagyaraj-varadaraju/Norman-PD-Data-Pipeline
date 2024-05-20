@@ -69,13 +69,7 @@ def extractincidents(data):
 
 
                         # Create a dictionary to store the incident details
-                        split_row = {
-                            "incident_time": incident_time,
-                            "incident_number": incident_number,
-                            "incident_location": incident_location,
-                            "incident_nature": incident_nature,
-                            "incident_ori": incident_ori
-                        }
+                        split_row = [incident_time, incident_number, incident_location, incident_nature, incident_ori]
 
                         # Append the split row to the incidents list
                         incidents.append(split_row)

@@ -22,13 +22,12 @@ def get_time(time):
 
 
 # Determine the rank of the location based on the frequency of incidents at that location.
-def get_location_ranks(con):
+def get_location_ranks(incidents_df):
     # Create a dictionary to store the rank of the location based on the frequency of incidents at that location.
     location_ranks = {}
 
-    with con.session as s:
-        # Get the location and the frequency of incidents at that location
-        rows = s.execute(text("SELECT incident_location, COUNT(*) FROM incidents GROUP BY incident_location ORDER BY COUNT(*) DESC, incident_location ASC")).fetchall()
+    # Get the location and the frequency of incidents at that location
+    rows = incidents_df.groupby('incident_location').size().reset_index().rename(columns={0: 'count'}).sort_values(by=['count', 'incident_location'], ascending=[False, True]).values
 
     assigned_rank = 1
 
@@ -48,13 +47,12 @@ def get_location_ranks(con):
 
 
 # Determine the rank of the incident based on the frequency of the incident nature.
-def get_incident_ranks(con):
+def get_incident_ranks(incidents_df):
     # Create a dictionary to store the rank of the incident based on the frequency of the incident nature.
     incident_ranks = {}
 
-    with con.session as s:
-        # Get the incident nature and the frequency of incidents with that nature
-        rows = s.execute(text("SELECT incident_nature, COUNT(*) FROM incidents GROUP BY incident_nature ORDER BY COUNT(*) DESC, incident_nature ASC")).fetchall()
+    # Get the incident nature and the frequency of incidents with that nature
+    rows = incidents_df.groupby('incident_nature').size().reset_index().rename(columns={0: 'count'}).sort_values(by=['count', 'incident_nature'], ascending=[False, True]).values
 
     assigned_rank = 1
 
@@ -74,13 +72,10 @@ def get_incident_ranks(con):
 
 
 # EMSSTAT is a boolean value based on the incident_ori value.
-def get_emsstat(incidents):
+def get_emsstat(incidents_df):
     # Case 1 - Return True if the incident_ori is EMSSTAT
     # Case 2 - Return True if the incident_ori for any subsequent record or two (any records) is EMSSTAT at the same time and location
     emsstat_values = {}
-
-    # Make the incidents array a dataframe to make it easier to traverse through the records
-    incidents_df = pd.DataFrame(incidents, columns=['incident_time', 'incident_number', 'incident_location', 'nature', 'incident_ori'])
 
     # Replace all 'EMSSSTAT' values with 1 and all other values with 0
     incidents_df['emsstat'] = incidents_df['incident_ori'].apply(lambda x: 1 if x == 'EMSSTAT' else 0)
