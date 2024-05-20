@@ -1,31 +1,31 @@
-# cis6930sp24 -- Assignment2
+# Norman Police Department Incident Management System
 
 Name: Bhagya Raj Varadaraju\
-UFID: 6021-2561\
-Email: varadaraju.b@ufl.edu
+Email: bhagyaraj.varadaraju@gmail.com
 
-# Assignment Description (in your own words)
+# Project Description
 
-In this project, we perform data extraction on the Norman Police Department incident summary pdf files by fetching them using URLs and then the extracted data is augmented. This program reads the pdf files and extracts the data using pypdf library. It then parses the file and converts all the incident related data into a list of lists. This data is then stored in a SQLite database with a table called 'incidents'. It has the following columns:
+In this project, we perform data extraction on the Norman Police Department incident summary pdf files by fetching them using URLs and then the extracted data is augmented. This program reads the pdf files and extracts the data using pypdf library for all the dates selected by the user. It then parses the file and converts all the incident related data into a list of lists. This data is then stored as a dataframe with the following columns:
 
 - incident_time
 - incident_number
 - incident_location
-- nature
+- incident_nature
 - incident_ori
 
-This table is then populated with all the extracted incident records. Then this db is read and augmented with the following information:
+This dataframe is then read and transformed to contain the following information:
 
+- Date (YYYY-MM-DD)
 - Day of the Week
 - Time of Day
-- Weather
+- Location
+- Latitude
+- Longitude
 - Location Rank
-- Side of Town
+- Incident Nature
 - Incident Rank
-- Nature
-- EMSSTAT
 
-This augmented data is then stored in a csv file called 'augmented_data.csv'. It also prints the augmented data to stdout.
+This augmented data is then used for visualizing the data and understanding the trends in the incidents that occur in Norman, OK. This can be used by the Norman Police Department to manage the incidents that occur in Norman, OK and take necessary actions to prevent them.
 
 ## Dependencies
 - pypdf
@@ -35,7 +35,9 @@ This augmented data is then stored in a csv file called 'augmented_data.csv'. It
 - requests
 - numpy
 - pandas
-
+- streamlit
+- seaborn
+- altair
 
 # How to install
 - curl https://pyenv.run | bash
@@ -52,35 +54,44 @@ https://github.com/bhagyaraj-varadaraju/cis6930sp24-assignment2/assets/20358558/
 For running pytest: **_pipenv run python -m pytest_**
 
 ## Functions
-### assignment2.py
-- main(url_file) - _This is the main function   _
+### src/NormanPD.py
+- main() - _This is the main function to get input dates from the user._
+- extract_pdf_data(date) - _This function takes the date as input and extracts the data from the pdf file and returns a list of lists containing the incident data._
+- transform_data(all_dates) - _This function takes the list of dates as input and transforms the data into a dataframe with the required columns._
+- load_data(augmented_data) - _This function takes the augmented data as input and loads it into the app._
 
-### augment_data.py
-- augment_data(con) - _This function takes the connection to the database as input and augments the data with the required information. It returns the augmented data as a list of lists._
+### src/utils/augmentation.py
+- augment_data(incidents) - _This function takes the connection to the database as input and augments the data with the required information. It returns the augmented data as a list of lists._
 
-### augment_utils.py
+### src/utils/augmentation_helper.py
 - get_day_of_week(date) - _This function takes the date as input and returns the day of the week._
 - get_time_of_day(time) - _This function takes the time as input and returns the time of the day._
 - get_location_ranks(db) - _This function takes the database connection as input and returns a dictionary with the location as the key and the rank as the value._
 - get_incident_ranks(db) - _This function takes the database connection as input and returns a dictionary with the incident nature as the key and the rank as the value._
 - get_emsstat(incidents) - _This function takes the list of incidents as input and returns a dictionary with the row number as the key and the emsstat_value as the value._
 
-### extract_utils.py
-- fetchincidents(url) - _This function fetches the pdf file from the given url and returns the data in io.BytesIO format._
-- extractincidents(data) - _This function takes the data in io.BytesIO format as input and extracts the data from the pdf file and returns a list of lists containing the incident data._
-- createdb() - This function creates a sqlite database and the incidents table if it does not exist. It returns the database connection._
-- populatedb(con, incidents) - _This function takes the connection to the database and the list of incidents as input and populates the database with the extracted data. It does not return anything._
+### src/utils/extraction.py
+- fetchincidents(date, url) - _This function fetches the pdf file from the given url and returns the data in io.BytesIO format._
+- extractincidents(date, data) - _This function takes the data in io.BytesIO format as input and extracts the data from the pdf file and returns a list of lists containing the incident data._
 
-### location_helper.py
+### src/utils/location_helper.py
 - get_side_of_town(location) - _This function takes the location as input and returns the side of the town._
 - get_lat_long(location) - _This function takes the location as input and returns the latitude and longitude of the location._
 - is_lat_long(location) - _This function takes the location as input and returns True if the location is already in latitude and longitude format, else False._
 
-### weather_helper.py
+### src/utils/weather_helper.py
 - get_weather_code(time, location) - _This function takes the time and location as input and returns the weather code._
 - get_date(incident_time) - _This function takes the incident time as input and returns the date in the format needed by open-meteo historical weather api._
 - get_weather_data(lat, long, date) - _This function takes the latitude, longitude and date as input and returns the weather data from the open-meteo historical weather api._
 
+### src/pages/Incidents_Frequency.py
+- plot_data() - _This plot illustrates the incident count by hour for the selected dates._
+
+### src/pages/Critical_Incidents.py
+- plot_data() - _This plot visualises the top 10 incident natures by the frequency of their occurence during the dates you selected. You can select additional incident natures to compare them against the top 10 incident types._
+
+### src/pages/Crime_Hotspots.py
+- plot_data() - _This graph illustrates the incident frequency by the location of the incident during the selected dates. You can select additional locations to compare them against the top 25 Hotspots._
 
 ## Bugs and Assumptions
 

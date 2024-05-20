@@ -24,7 +24,7 @@ if "augmented_data" not in st.session_state:
 
 # Download and extract the incident data for the a single date
 @st.cache_data
-def extract_pdf(date):
+def extract_pdf_data(date):
     # Create the url for each selected date
     ## Example URL: https://www.normanok.gov/sites/default/files/documents/YYYY-MM/YYYY-MM-DD_daily_incident_summary.pdf
     url = "https://www.normanok.gov/sites/default/files/documents/" + date.strftime("%Y-%m") + "/" + date.strftime("%Y-%m-%d") + "_daily_incident_summary.pdf"
@@ -46,7 +46,7 @@ def transform_data(all_dates):
 
     # Iterate through each url and extract the raw incident data
     for date in all_dates:
-        incidents.extend(extract_pdf(date))
+        incidents.extend(extract_pdf_data(date))
 
     # Augment the data
     augmented_data = augmentation.augment_data(incidents)
@@ -54,7 +54,7 @@ def transform_data(all_dates):
 
 
 # Write the augmented data to streamlit app
-def write_data(augmented_data):
+def load_data(augmented_data):
     if not augmented_data:
         st.info("Download the data to view the transformed incident summaries here:")
     else:
@@ -91,7 +91,7 @@ def main():
 
     # View the augmented data
     st.write("You Selected: ", st.session_state.incident_date_range[0], " - ", st.session_state.incident_date_range[1])
-    write_data(st.session_state.augmented_data)
+    load_data(st.session_state.augmented_data)
 
 
 if __name__ == '__main__':
