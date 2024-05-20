@@ -1,4 +1,5 @@
 from datetime import datetime
+from sqlalchemy import text
 import pandas as pd
 
 
@@ -21,12 +22,14 @@ def get_time(time):
 
 
 # Determine the rank of the location based on the frequency of incidents at that location.
-def get_location_ranks(db):
+def get_location_ranks(con):
     # Create a dictionary to store the rank of the location based on the frequency of incidents at that location.
     location_ranks = {}
-    cur = db.cursor()
-    cur.execute('''SELECT incident_location, COUNT(*) FROM incidents GROUP BY incident_location ORDER BY COUNT(*) DESC, incident_location ASC''')
-    rows = cur.fetchall()
+
+    with con.session as s:
+        # Get the location and the frequency of incidents at that location
+        rows = s.execute(text("SELECT incident_location, COUNT(*) FROM incidents GROUP BY incident_location ORDER BY COUNT(*) DESC, incident_location ASC")).fetchall()
+
     assigned_rank = 1
 
     # Assign the rank to the location based on the frequency of incidents at that location.
@@ -45,12 +48,14 @@ def get_location_ranks(db):
 
 
 # Determine the rank of the incident based on the frequency of the incident nature.
-def get_incident_ranks(db):
+def get_incident_ranks(con):
     # Create a dictionary to store the rank of the incident based on the frequency of the incident nature.
     incident_ranks = {}
-    cur = db.cursor()
-    cur.execute('''SELECT nature, COUNT(*) FROM incidents GROUP BY nature ORDER BY COUNT(*) DESC, nature ASC''')
-    rows = cur.fetchall()
+
+    with con.session as s:
+        # Get the incident nature and the frequency of incidents with that nature
+        rows = s.execute(text("SELECT incident_nature, COUNT(*) FROM incidents GROUP BY incident_nature ORDER BY COUNT(*) DESC, incident_nature ASC")).fetchall()
+
     assigned_rank = 1
 
     # Assign the rank to the incident based on the frequency of the incident_nature.

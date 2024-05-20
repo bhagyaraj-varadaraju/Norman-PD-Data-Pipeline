@@ -12,6 +12,9 @@ __pycache__/
 .DS_Store
 .cache.sqlite
 
+# Secrets file
+secrets.toml
+
 # Distribution / packaging
 .Python
 build/

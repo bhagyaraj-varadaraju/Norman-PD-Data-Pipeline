@@ -1,18 +1,23 @@
 from utils import augmentation_helper, weather_helper, location_helper
+from sqlalchemy import text
 
 
 # Read and augment the data from the database
-def augment_data(db):
+def augment_data(con):
     # Raw incident structure: [incident_time, incident_number, incident_location, incident_nature, incident_ori]
     # Augmented data row: [Date of the Incident, Day of the Week, Time of Day, Weather, Location Rank, Side of Town, Incident Rank, Nature, EMSSTAT]
     augmented_data = []
-    incidents = db.execute("SELECT * FROM incidents").fetchall()
+
+    # Get the incidents from the database
+    with con.session as s:
+        # Get the incidents from the database
+        incidents = s.execute(text("SELECT * FROM incidents")).fetchall()
 
     # Create and populate the location_ranks dictionary
-    location_ranks = augmentation_helper.get_location_ranks(db)
+    location_ranks = augmentation_helper.get_location_ranks(con)
 
     # Create and populate the incident_ranks dictionary
-    incident_ranks = augmentation_helper.get_incident_ranks(db)
+    incident_ranks = augmentation_helper.get_incident_ranks(con)
 
     # Create and populate the emsstat dictionary
     emsstat_values = augmentation_helper.get_emsstat(incidents)

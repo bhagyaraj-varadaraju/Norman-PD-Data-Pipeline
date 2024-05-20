@@ -4,6 +4,7 @@ import pypdf
 import io
 import re
 import sqlite3
+from sqlalchemy import text, insert
 
 
 # Fetch the PDF from the URL
@@ -66,8 +67,17 @@ def extractincidents(data):
                             incident_location = incident_fields[2]
                             incident_nature = incident_fields[3]
 
+
+                        # Create a dictionary to store the incident details
+                        split_row = {
+                            "incident_time": incident_time,
+                            "incident_number": incident_number,
+                            "incident_location": incident_location,
+                            "incident_nature": incident_nature,
+                            "incident_ori": incident_ori
+                        }
+
                         # Append the split row to the incidents list
-                        split_row = [incident_time.strip(), incident_number.strip(), incident_location.strip(), incident_nature.strip(), incident_ori.strip()]
                         incidents.append(split_row)
 
         # Return the list of incidents by removing the header of the PDF
@@ -84,31 +94,30 @@ def extractincidents(data):
 def createdb(db_name):
     try:
         # Connect to the database
-        con = sqlite3.connect(f'./resources/{db_name}.db')
-        cur = con.cursor()
+        con = st.connection("normanpd_raw", type="sql")
 
         # Create the incidents table
-        cur.execute('''CREATE TABLE IF NOT EXISTS incidents (incident_time TEXT, incident_number TEXT, incident_location TEXT, nature TEXT, incident_ori TEXT)''')
+        with con.session as s:
+            # Create the incidents table
+            s.execute(text("CREATE TABLE IF NOT EXISTS incidents (incident_time TEXT, incident_number TEXT, incident_location TEXT, incident_nature TEXT, incident_ori TEXT)"))
 
-        # Commit the changes
-        con.commit()
+            # Commit the changes
+            s.commit()
 
         # Return the connection
         return con
 
     # Handle any errors that occur
     except sqlite3.Error as e:
-        print(f"SQLite error: {e}")
-        raise
+        st.error(f"An unexpected error occurred during table creation: {e}")
 
 
-# Insert the incidents data into the created SQLite database
 def populatedb(con, incidents):
     # Insert the incidents data into the database
-    cur = con.cursor()
-    for incident in incidents:
-        if len(incident) == 5:
-            cur.execute('''INSERT INTO incidents VALUES (?, ?, ?, ?, ?)''', incident)
-
-    # Commit and Close the connection
-    con.commit()
+    with con.session as s:
+        # Insert the incidents data into the database
+        for incident in incidents:
+            s.execute(text("INSERT INTO incidents (incident_time, incident_number, incident_location, incident_nature, incident_ori) VALUES (:incident_time, :incident_number, :incident_location, :incident_nature, :incident_ori)"), incident)
+        
+        # Commit the changes
+        s.commit()

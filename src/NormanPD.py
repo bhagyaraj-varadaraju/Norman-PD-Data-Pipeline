@@ -23,13 +23,12 @@ if "incident_date_range" not in st.session_state:
 def download_data(all_dates):
     # Delete the old db file if it exists
     try:
-        os.remove("./resources/normanpd_raw.db")
         os.remove("./resources/normanpd_augmented.csv")
     except FileNotFoundError:
         pass
 
     # Initialize the database connection
-    db = None
+    conn = extraction.createdb("normanpd_raw")
 
     # Iterate through each url and extract the raw incident data
     for date in all_dates:
@@ -43,14 +42,11 @@ def download_data(all_dates):
         # Extract data
         incidents = extraction.extractincidents(incident_data)
 
-        # Create new database
-        db = extraction.createdb("normanpd_raw")
-
         # Insert the extracted raw data into the database
-        extraction.populatedb(db, incidents)
+        extraction.populatedb(conn, incidents)
 
     # Augment the data
-    augmented_data = augmentation.augment_data(db)
+    augmented_data = augmentation.augment_data(conn)
 
     # Redirect to csv file
     with open("./resources/normanpd_augmented.csv", "w") as f:
@@ -61,8 +57,6 @@ def download_data(all_dates):
         for row in augmented_data:
             f.write("\t".join(map(str, row)) + "\n")
 
-    # Close the database connection
-    db.close()
 
 @st.cache_data
 def view_data(all_dates, csv_file):
