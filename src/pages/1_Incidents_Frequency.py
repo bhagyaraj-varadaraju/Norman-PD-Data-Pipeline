@@ -8,11 +8,11 @@ st.markdown("# Heatmap")
 st.write("""This plot illustrates the incident count by hour for the selected dates.""")
 
 def plot_data():
-    # Read the augmented data from the csv file
-    try:
-        augmented_df = pd.read_csv("./resources/normanpd_augmented.csv", sep="\t")
-    except FileNotFoundError:
-        st.error("Please download the data first.")
+    # Read the augmented data from the session state
+    if st.session_state.augmented_data:
+        augmented_df = pd.DataFrame(st.session_state.augmented_data, columns=["Date (YYYY-MM-DD)", "Day of the Week", "Time of Day", "Location", "Location Rank", "Incident Nature", "Incident Rank"])
+    else:
+        st.error("Please download the data to visualize the incident frequency by hour")
         return
 
     # Calculate the hourly incident count for the selected dates

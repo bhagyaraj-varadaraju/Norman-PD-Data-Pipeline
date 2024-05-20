@@ -67,7 +67,6 @@ def extractincidents(data):
                             incident_location = incident_fields[2]
                             incident_nature = incident_fields[3]
 
-
                         # Create a dictionary to store the incident details
                         split_row = [incident_time, incident_number, incident_location, incident_nature, incident_ori]
 
@@ -82,36 +81,3 @@ def extractincidents(data):
     except Exception as e:
         print(f"An unexpected error occurred: {e}")
         return []
-
-
-# Create an SQLite database file named normanpd.db in the resources/ directory and create an incidents table
-def createdb(db_name):
-    try:
-        # Connect to the database
-        con = st.connection("normanpd_raw", type="sql")
-
-        # Create the incidents table
-        with con.session as s:
-            # Create the incidents table
-            s.execute(text("CREATE TABLE IF NOT EXISTS incidents (incident_time TEXT, incident_number TEXT, incident_location TEXT, incident_nature TEXT, incident_ori TEXT)"))
-
-            # Commit the changes
-            s.commit()
-
-        # Return the connection
-        return con
-
-    # Handle any errors that occur
-    except sqlite3.Error as e:
-        st.error(f"An unexpected error occurred during table creation: {e}")
-
-
-def populatedb(con, incidents):
-    # Insert the incidents data into the database
-    with con.session as s:
-        # Insert the incidents data into the database
-        for incident in incidents:
-            s.execute(text("INSERT INTO incidents (incident_time, incident_number, incident_location, incident_nature, incident_ori) VALUES (:incident_time, :incident_number, :incident_location, :incident_nature, :incident_ori)"), incident)
-        
-        # Commit the changes
-        s.commit()
