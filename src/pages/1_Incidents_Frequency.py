@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-import seaborn as sns
+import altair as alt
 
 
 st.set_page_config(layout="wide", page_title="Plotting Demo", page_icon="🚔")
@@ -17,18 +17,32 @@ def plot_data():
 
     # Calculate the hourly incident count for the selected dates
     incident_count = augmented_df.groupby(['Date (YYYY-MM-DD)', 'Time of Day']).size().unstack()
-    selected_dates = augmented_df['Date (YYYY-MM-DD)'].unique()
+    incident_count.fillna(0, inplace=True)
 
     if incident_count.empty:
         st.error("No data available for the selected dates.")
         return
 
     # Plot a heatmap to visualise the hourly incident count
-    ax = sns.heatmap(incident_count, cmap='coolwarm', annot=True, xticklabels=range(24), yticklabels=selected_dates)
-    sns.set_theme(font_scale=0.75)
-    ax.title.set_text('Incident Count by Hour')
-    ax.set_xlabel('Hour')
-    ax.set_ylabel('Date')
-    st.pyplot(ax.get_figure())
+    chart_data = incident_count.reset_index().melt('Date (YYYY-MM-DD)', var_name='Time of Day', value_name='Incident Count')
+
+    heatmap = alt.Chart(chart_data, title='Incident count by hour', height=500).mark_rect().encode(
+        x='Time of Day:O',
+        y='Date (YYYY-MM-DD):O',
+        color=alt.Color('Incident Count:Q', scale=alt.Scale(scheme='blueorange')))
+
+    text = heatmap.mark_text(baseline='middle'
+    ).encode(text='Incident Count:Q', color=alt.value('black'), size=alt.value(16))
+
+    chart = alt.layer(heatmap, text
+    ).configure_title(
+        fontSize=25, anchor='middle'
+    ).configure_axis(
+        labelFontSize=12, titleFontSize=15
+    ).configure_legend(
+        labelFontSize=12, titleFontSize=15, gradientThickness=30, gradientLength=300, titleAnchor='middle'
+    )
+
+    st.altair_chart(chart, use_container_width=True)
 
 plot_data()

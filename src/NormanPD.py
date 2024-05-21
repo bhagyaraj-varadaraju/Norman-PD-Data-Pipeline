@@ -60,7 +60,6 @@ def load_data(augmented_data):
     else:
         # Create a dataframe to store the augmented data
         augmented_df = pd.DataFrame(augmented_data, columns=["Date (YYYY-MM-DD)", "Day of the Week", "Time of Day", "Location", "Location Rank", "Incident Nature", "Incident Rank"])
-        st.toast(":green[Data downloaded successfully!]", icon="🎉")
         st.write(augmented_df)
 
 
@@ -86,8 +85,9 @@ def main():
         # Download the incident data for each selected date
         resultant_data = transform_data(all_dates)
 
-        # Save the augmented data to the session state
+        # Save the resultant augmented data to the session state and display a success toast message
         st.session_state.augmented_data = resultant_data
+        st.toast(":green[Data downloaded successfully!]", icon="🎉")
 
     # View the augmented data
     st.write("You Selected: ", st.session_state.incident_date_range[0], " - ", st.session_state.incident_date_range[1])
