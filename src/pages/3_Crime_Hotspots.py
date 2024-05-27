@@ -3,8 +3,11 @@ import pandas as pd
 import altair as alt
 
 
-st.set_page_config(layout="wide", page_title="Plotting Demo", page_icon="🚔")
+st.set_page_config(layout="wide", page_title="Crime Hotspots | Norman PD Incident Management", page_icon="🚔")
 st.title("Bar chart")
+
+if "augmented_data" not in st.session_state:
+    st.session_state.augmented_data = []
 
 def plot_data():
     # Read the augmented data from the session state
